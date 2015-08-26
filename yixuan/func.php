@@ -4919,8 +4919,17 @@ function main($db,$filestr,$arr)
 		
 	}
 	elseif ($arr['cmd']=='exportxy'){
+	
+	error_reporting(E_ALL);
+	ini_set('display_errors', TRUE);
+	ini_set('display_startup_errors', TRUE);
+	date_default_timezone_set('Europe/London');
+
+	if (PHP_SAPI == 'cli')
+		die('This example should only be run from a Web Browser');
+
 	    /** Include PHPExcel */
-	    require_once dirname(__FILE__) . '/../class/PHPExcel.php';
+	    require_once dirname(__FILE__) . '/class/PHPExcel.php';
 	    
 	    
 	    // Create new PHPExcel object
@@ -4937,47 +4946,46 @@ function main($db,$filestr,$arr)
 	    
 	    $sql="SELECT a.*,b.zpcount,c.bzbhcount,e.kc_kj_count,e.kc_name,d.add_time,d.zs_id as yskc, (e.kc_kj_count-d.zs_id) as sykc,(d.zs_id+1) as dqkc from student a left join (select count(*) as zpcount,username from zp group by username) b on a.username=b.username left join (select count(*) as bzbhcount,username from bzbh  group by username) c  on a.username=c.username left join (SELECT max(zs_id) as zs_id ,max(add_time) as add_time,username,kc_id from student_kj group by username,kc_id) d on a.username=d.username and a.kc_id=d.kc_id left join (select count(*) as kc_kj_count,kc.kc_id,kc.kc_name from kc , kj where kc.kc_id=kj.kc_id group by kc.kc_id) e on a.kc_id=e.kc_id  order by a.student_id";
 	    $res=mysql_query($sql,$db);
-	    $i=0;
-	    while($row = mysql_fetch_array($res, MYSQL_ASSOC))
-	    {
-	        $objPHPExcel->setActiveSheetIndex(0)
-	        ->setCellValue("A".$i,$row["student_id"])
-	        ->setCellValue("B".$i,$row["username"])
-	        ->setCellValue("C".$i,$row["userpwd"])
-	        ->setCellValue("D".$i,$row["student_name"])
-	        ->setCellValue("E".$i,$row["student_sex"])
-	        ->setCellValue("F".$i,$row["student_birthday"])
-	        ->setCellValue("G".$i,$row["student_address"])
-	        ->setCellValue("H".$i,$row["student_parent"])
-	        ->setCellValue("I".$i,$row["student_phone"])
-	        ->setCellValue("J".$i,$row["student_email"])
-	        ->setCellValue("K".$i,$row["student_weibo"])
-	        ->setCellValue("L".$i,$row["student_qq"])
-	        ->setCellValue("M".$i,$row["student_nickname"])
-	        ->setCellValue("N".$i,$row["student_xgjg"])
-	        ->setCellValue("O".$i,$row["student_xgpxb"])
-	        ->setCellValue("P".$i,$row["student_xqah"])
-	        ->setCellValue("Q".$i,$row["student_jrxgzy"])
-	        ->setCellValue("R".$i,$row["student_cz"])
-	        ->setCellValue("S".$i,$row["student_qd"])
-	        ->setCellValue("T".$i,$row["student_pic"])
-	        ->setCellValue("U".$i,$row["bj_id"])
-	        ->setCellValue("V".$i,$row["kc_id"]
-	        ->setCellValue("W".$i,$row["kc_name"])
-	        ->setCellValue("X".$i,$row["rx_time"])
-	        ->setCellValue("Y".$i,$row["qs_zs_id"])
-	        ->setCellValue("Z".$i,$row["ifsd"])
-	        ->setCellValue("A".$i,$row["admin_id"])
-	        ->setCellValue("AA".$i,isset($row["zpcount"]) ? rawurlencode($row["zpcount"]) : "0")
-	        ->setCellValue("AB".$i,isset($row["bzbhcount"]) ? rawurlencode($row["bzbhcount"]) : "0")
-	        ->setCellValue("AC".$i,isset($row["kc_kj_count"]) ? rawurlencode($row["kc_kj_count"]) : "0")
-	        ->setCellValue("AD".$i,$row["add_time"])
-	        ->setCellValue("AE".$i,isset($row["yskc"]) ? rawurlencode($row["yskc"]) : "0")
-	        ->setCellValue("AF".$i,isset($row["sykc"]) ? rawurlencode($row["sykc"]) : "0")
-	        ->setCellValue("AG".$i,isset($row["dqkc"]) ? rawurlencode($row["dqkc"]) : "0"));
-	        $i=$i+1;
-	    }
-	    
+	    $i=1;
+	   while($row = mysql_fetch_array($res, MYSQL_ASSOC))
+            {
+		$objPHPExcel->setActiveSheetIndex(0)
+                ->setCellValue("A".$i,$row["student_id"])
+		->setCellValue("B".$i,$row["username"])
+                ->setCellValue("C".$i,$row["userpwd"])
+                ->setCellValue("D".$i,$row["student_name"])
+                ->setCellValue("E".$i,$row["student_sex"])
+                ->setCellValue("F".$i,$row["student_birthday"])
+		->setCellValue("G".$i,$row["student_address"])
+                ->setCellValue("H".$i,$row["student_parent"])
+                ->setCellValue("I".$i,$row["student_phone"])
+                ->setCellValue("J".$i,$row["student_email"])
+                ->setCellValue("K".$i,$row["student_weibo"])
+                ->setCellValue("L".$i,$row["student_qq"])
+                ->setCellValue("M".$i,$row["student_nickname"])
+                ->setCellValue("N".$i,$row["student_xgjg"])
+                ->setCellValue("O".$i,$row["student_xgpxb"])
+                ->setCellValue("P".$i,$row["student_xqah"])
+                ->setCellValue("Q".$i,$row["student_jrxgzy"])
+                ->setCellValue("R".$i,$row["student_cz"])
+                ->setCellValue("S".$i,$row["student_qd"])
+                ->setCellValue("T".$i,$row["student_pic"])
+                ->setCellValue("U".$i,$row["bj_id"])
+                ->setCellValue("V".$i,$row["kc_id"])
+                ->setCellValue("W".$i,$row["kc_name"])
+                ->setCellValue("X".$i,$row["rx_time"])
+                ->setCellValue("Y".$i,$row["qs_zs_id"])
+                ->setCellValue("Z".$i,$row["ifsd"])
+		->setCellValue("AA".$i,$row["admin_id"])
+                ->setCellValue("AB".$i,isset($row["zpcount"]) ? $row["zpcount"] : "0")
+                ->setCellValue("AC".$i,isset($row["bzbhcount"]) ? $row["bzbhcount"] : "0")
+                ->setCellValue("AD".$i,isset($row["kc_kj_count"]) ? $row["kc_kj_count"] : "0")
+                ->setCellValue("AE".$i,$row["add_time"])
+                ->setCellValue("AF".$i,isset($row["yskc"]) ? $row["yskc"] : "0")
+                ->setCellValue("AG".$i,isset($row["sykc"]) ? $row["sykc"] : "0")
+                ->setCellValue("AH".$i,isset($row["dqkc"]) ? $row["dqkc"] : "0");
+		$i ++;
+	} 
 	   
 	    
 	    // Rename worksheet
