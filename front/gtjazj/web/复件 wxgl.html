@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+<title>微信管理</title>
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/wxgl.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-ie6.css">
+<link rel="stylesheet" type="text/css" href="css/ie.css">
+<link rel="stylesheet" type="text/css" href="css/comm.css"/>
+<script src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap-ie.js"></script>
+<script type="text/javascript" src="scripts/My97DatePicker/WdatePicker.js"></script>
+<script src="scripts/function.js"></script>
+</head>
+<body>
+<h1 class="text-center">微信管理</h1><br>
+<div id="wxgl"  class="form-horizontal"><!-- simple frame -->
+	<div class="form-group">
+      <label class="col-xs-2 col-sm-2 control-label" style="margin-left:3%;width: 16.666666666666664%;">编号:</label>
+      <div class="col-xs-3 col-sm-3">
+        <input name="select_action_id" class="form-control" placeholder="">
+      </div>
+      <label class="col-xs-2 col-sm-2 control-label">类别:</label>
+      <div class="col-xs-3 col-sm-3">
+        <select name="select_get_type_id" class="form-control" placeholder=""></select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-xs-2 col-sm-2 control-label" style="margin-left:3%;width: 16.666666666666664%;">标题:</label>
+      <div class="col-xs-3 col-sm-3">
+        <input name="select_reply_title" class="form-control" placeholder="">
+      </div>
+      <label class="col-xs-2 col-sm-2 control-label">摘要:</label>
+      <div class="col-xs-3 col-sm-3">
+        <input name="select_reply_description" class="form-control" placeholder="">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-xs-2 col-sm-2 control-label" style="margin-left:3%;width: 16.666666666666664%;">起始日期:</label>
+      <div class="col-xs-3 col-sm-3">
+        <input name="select_begin_date" class="Wdate form-control" placeholder="">
+      </div>
+      <label class="col-xs-2 col-sm-2 control-label">结束日期:</label>
+      <div class="col-xs-3 col-sm-3">
+        <input name="select_end_date" class="Wdate form-control" placeholder="">
+      </div>
+    </div>
+    <br>
+    <div class="text-center  form-group">
+      <button class="btn btn-primary" type="button" onClick="query('action')">查询</button>
+      <button class="btn btn-primary btn-right" type="button" onClick="newadd('wxgl')">新增</button>
+      <button class="btn btn-primary btn-right" type="button" onClick="showhtml('lhgl.html')">留痕管理</button>
+    </div>
+   <br> 
+  <table border = "1" class="table table-bordered  table-hover ">
+    <thead>
+      <tr>
+        <th >编号</th>
+        <th >类别</th>
+        <th >标题</th>
+        <th >日期</th>
+        <th >操作</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+    </tfoot>
+  </table>
+  <div class="search-for">
+    <p class="paging text-center"><a id="prePage" >上一页</a> | 1/1 | <a id="nextPage" >下一页</a></p>
+  </div>
+</div>
+<form id="action_form"  class="form-horizontal" style="display:none">
+  <div class="row">
+      <div class="col-xs-6 col-sm-6">
+          <div class="form-group">
+            <label class="col-xs-4 col-sm-4 control-label">编号:</label>
+            <div class="col-xs-6 col-sm-6">
+              <input  name="action_id" class="form-control" placeholder="" readonly>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-xs-4 col-sm-4 control-label">类型:</label>
+            <div class="col-xs-6 col-sm-6">
+              <select  name="get_type_id" class="form-control" placeholder="" onChange="change('get_type_id')"></select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-xs-4 col-sm-4 control-label">回复类型:</label>
+            <div class="col-xs-6 col-sm-6">
+              <select  name="reply_msgtype_id" class="form-control" placeholder="">
+                <option value="3">图文</option>
+                <option value="1">文本</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-xs-4 col-sm-4 control-label">日期:</label>
+            <div class="col-xs-6 col-sm-6">
+              <input  name="reply_date" class="Wdate form-control" placeholder="">
+            </div>
+           </div>
+       </div>
+       <div class="col-xs-6 col-sm-6 row">
+       		<div class="col-xs-5 col-sm-5">
+            	<img  src="" name="action_pic" class="img-thumbnail" style="min-width:140px;width:140px;height:140px">
+              <div id="files" class="files"></div>
+              <p style="margin-top:10px"> <span class="btn btn-success fileinput-button"> <span>选择图片</span>
+                <input  type="file" name="action_pic_upload" multiple>
+                </span> </p>
+            </div>
+            <div class="col-xs-6 col-sm-6 fileupload-progress" id="pic_progress" style="display:none"> 
+                <!-- The global progress bar -->
+                <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="margin-top:70px;margin-left:-20px">
+                  <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                </div>
+                <!-- The extended global progress state -->
+                <div class="progress-extended">&nbsp;</div>
+             </div>
+       </div>
+   </div>
+  <div class="form-group dmmc" style="display:none">
+    <label class="col-xs-2 col-sm-2 control-label">代码:</label>
+    <div class="col-xs-3 col-sm-3">
+      <input  name="get_event_key" class="form-control" placeholder="公司代码">
+    </div>
+    <label class="col-xs-2 col-sm-2 control-label">名称:</label>
+    <div class="col-xs-3 col-sm-3">
+      <input  name="get_event" class="form-control" placeholder="公司名称或行业名称">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-xs-2 col-sm-2 control-label">标题:</label>
+    <div class="col-xs-3 col-sm-3">
+      <input  name="reply_title" class="form-control" placeholder="图文格式标题">
+    </div>
+    <label class="col-xs-2 col-sm-2 control-label">跳转页面url:</label>
+    <div class="col-xs-3 col-sm-3">
+      <input  name="reply_url" class="form-control" placeholder="为空则由标题、图片、摘要、正文组成">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-xs-2 col-sm-2 control-label">摘要:</label>
+    <div class="col-xs-8 col-sm-8">
+      <textarea rows="3"  name="reply_description" class="form-control" placeholder="图文格式摘要"></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-xs-2 col-sm-2 control-label">正文:</label>
+    <div class="col-xs-8 col-sm-8">
+      <textarea rows="18"  name="reply_list" class="form-control" placeholder="图文格式时为正文，文本格式时为回复文本内容"></textarea>
+    </div>
+  </div>
+  <input name="get_msgtype_id" style="display:none">
+  <input name="cmd" value="add_action" style="display:none">
+  <div class="text-center">
+    <div id="save" class="btn btn-primary" type="button" onClick="save('wxgl')">保存</div>
+    <div class="btn btn-primary btn-right" type="button" onClick="cancel('wxgl')">返回</div>
+  </div>
+</form>
+</body>
+<script src="upload/jquery.ui.widget.js"></script>
+<script src="upload/load-image.min.js"></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="upload/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="upload/jquery.fileupload.js"></script>
+<!-- The File Upload processing plugin -->
+<script src="upload/jquery.fileupload-process.js"></script>
+<!-- The File Upload image preview & resize plugin -->
+<script src="upload/jquery.fileupload-image.js"></script>
+<!-- The File Upload audio preview plugin -->
+<script src="upload/jquery.fileupload-audio.js"></script>
+<!-- The File Upload video preview plugin -->
+<script src="upload/jquery.fileupload-video.js"></script>
+<!-- The File Upload validation plugin -->
+<script src="upload/jquery.fileupload-validate.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() { 
+   		action_init();
+   		$(".Wdate").click(function(){
+			WdatePicker({isShowClear:true,dateFmt:'yyyy-MM-dd'});
+		});
+		$(".Wdate").css("height","34px");
+		
+   		main("query_get_type");
+   });
+</script>
+</html>

@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>杭州派诺Panel系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/offcanvas.css" rel="stylesheet">
+    
+    <link href="css/audioplayer.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap-ie.js"></script>
+    <script type="text/javascript" src="scripts/offcanvas.js"></script>
+    <script type="text/javascript" src="scripts/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="scripts/ie-emulation-modes-warning.js"></script>
+    <script type="text/javascript" src="scripts/function.js"></script>
+    <script type="text/javascript" src="scripts/upload/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="scripts/upload/load-image.min.js"></script>
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+    <script type="text/javascript" src="scripts/upload/jquery.iframe-transport.js"></script>
+    <!-- The basic File Upload plugin -->
+    <script type="text/javascript" src="scripts/upload/jquery.fileupload.js"></script>
+    <!-- The File Upload processing plugin -->
+    <script type="text/javascript" src="scripts/upload/jquery.fileupload-process.js"></script>
+    <!-- The File Upload image preview & resize plugin -->
+    <script type="text/javascript" src="scripts/upload/jquery.fileupload-image.js"></script>
+    <!-- The File Upload audio preview plugin -->
+    <script type="text/javascript" src="scripts/upload/jquery.fileupload-audio.js"></script>
+    <!-- The File Upload video preview plugin -->
+    <script type="text/javascript" src="scripts/upload/jquery.fileupload-video.js"></script>
+    <!-- The File Upload validation plugin -->
+    <script type="text/javascript" src="scripts/upload/jquery.fileupload-validate.js"></script>
+    <script type="text/javascript" src="scripts/audioplayer.js"></script>
+    <script type="text/javascript">
+	   $(document).ready(function() { 
+			pageinit("audit");
+	   });
+	</script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+	<input type="text" class="hidden" name="audit_result_list">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">杭州派诺Panel系统</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+           <li role="presentation" class="dropdown">
+    		<a class="dropdown-toggle" data-toggle="dropdown"role="button" aria-expanded="false" id="checklist">
+                <button type="button" class="btn btn-xs btn-success btn-lg" onclick="bclick('checkin')" id="checkin">签入</button>
+                <button type="button" class="btn btn-xs btn-default btn-lg" onclick="bclick('checkout')" id="checkout">签出</button>
+                 </a></li>
+           <li role="presentation" class="dropdown">
+    		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+     	 登录员工：<span class="label label-primary" id="admin_id"></span><span class="caret"></span>
+   		 </a>
+   		 <ul class="dropdown-menu" role="menu">
+   		 <li><a onclick="loginout()">退出</a></li>
+    		</ul>
+ 			 </li>
+           
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="index.html">今日接触 <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="audit.html">今日审核</a></li>
+            <li><a href="statistical.html">工作统计</a></li>
+          </ul>
+          <ul class="nav navbar-fixed-bottom bottom-list">
+          	<div>项目编号:</div>
+            <div id="proj_id">1</div>
+            <div>项目名称：</div>
+            <div id="proj_name">沃尔玛满意度访问</div>
+          </ul>
+      
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <div class="table-responsive">
+          <div style="overflow-y:auto;max-height:650px">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>电话号码</th>
+                  <th>姓名</th>
+                  <th>性别</th>
+                  <th>年龄</th>
+                  <th>城市</th>
+                  <th>在线审核</th>
+                  <th>审核结果</th>
+                  <th>提交</th>
+                </tr>
+              </thead>
+              <tbody>
+         <tr>
+                  <td>10086</td>
+                  <td>张三</td>
+                  <td>男</td>
+                  <td>21</td>
+                  <td>杭州</td>
+                  <td>
+				<button type="button" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#myModal">审核</button>
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">在线审核</h4>
+      </div>
+      <div class="modal-body">
+<p>
+  <div class="input-group">
+  <span class="zdq">
+     <input name="Fruit" type="radio" value="">       <span>审核成功</span>
+     </span>
+    </div><!-- /input-group -->
+</p>
+<p>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <input name="Fruit" type="radio" value="">       <span>审核失败</span>
+      </span>
+      <input type="text" class="form-control" aria-label="...">
+    </div><!-- /input-group -->
+</p>
+<p>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <input name="Fruit" type="radio" value="">       <span>其他情况</span>
+      </span>
+      <input type="text" class="form-control" aria-label="...">
+    </div><!-- /input-group -->
+</p>
+  
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" >提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+                  </td>
+                  <td>
+             审核通过
+                  </td>
+                  <td>
+                <button type="button" class="btn btn-xs btn-warning" onClick="bclick('audit')">提交</button>
+                  </td>
+       </tr>
+        
+              </tbody>
+            </table>
+            </div>
+
+<nav>
+  <ul class="pagination hidden">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+   	<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+  
+</nav>
+
+<audio id="audio" src="" controls></audio>
+          </div>                    
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

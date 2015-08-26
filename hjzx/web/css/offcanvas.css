@@ -1,0 +1,290 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+.table-responsive {
+height: 1000px;
+}
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+.pagination-d {
+position:fixed;bottom:0px;right:0px;
+}
+
+.zdq{
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  border-radius: 4px;
+	float:left;
+}
+.form-signin {
+  max-width: 500px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.an{
+height:160px;
+width:160px;
+font-size:32px;
+}
+.t1{
+font-size:32px;
+text-align:center;
+height:90px;
+}
+
+.form-control-10{
+	width: 100%;
+}
+.form-control-5{
+	width: 50%;
+}
+.form-control-4{
+	width: 40%;
+}
+.form-control-3{
+	width: 30%;
+}
+.form-control-2{
+	width: 20%;
+}
+.form-control-1{
+	width: 10%;
+}
+
+.form-control-10,.form-control-5,.form-control-4,.form-control-3,.form-control-2,.form-control-1 {
+  display: block;
+  height: 22px;
+  float:left;
+  padding: 0px 5px;
+  color: #555;
+  font-size: 10px;
+  line-height: 22px;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control-10:focus,.form-control-5:focus,.form-control-4:focus,.form-control-3:focus,.form-control-2:focus,.form-control-1:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.form-control-10::-moz-placeholder,.form-control-5::-moz-placeholder,.form-control-4::-moz-placeholder,.form-control-3::-moz-placeholder,.form-control-2::-moz-placeholder,.form-control-1::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.form-control-10:-ms-input-placeholder,.form-control-5:-ms-input-placeholder,.form-control-4:-ms-input-placeholder,.form-control-3:-ms-input-placeholder,.form-control-2:-ms-input-placeholder,.form-control-1:-ms-input-placeholder {
+  color: #999;
+}
+.form-control-10::-webkit-input-placeholder,.form-control-5::-webkit-input-placeholder,.form-control-4::-webkit-input-placeholder,.form-control-3::-webkit-input-placeholder,.form-control-2::-webkit-input-placeholder,.form-control-1::-webkit-input-placeholder {
+  color: #999;
+}
+
+.form-kg{
+	float:left;
+	margin:0px 10px 0px 10px;
+}
+
+
+/* 上传插件 */
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+/* Fixes for IE < 8 */
+@media screen\9 {
+  .fileinput-button input {
+    filter: alpha(opacity=0);
+    font-size: 100%;
+    height: 100%;
+  }
+}
+/* 上传插件 */
+
+.bottom-list{
+	bottom:30px
+}
+
+.bottom-list div{
+	color: #337ab7;
+	margin: 0px 0px 10px 20px;
+}
+
+.left-1{
+	float:left;
+	width:10%;
+}
+
+.left-2{
+	float:left;
+	width:20%;
+}
+
+.left-3{
+	float:left;
+	width:30%;
+}
+
+.left-4{
+	float:left;
+	width:40%;
+}
+
+.left-5{
+	float:left;
+	width:50%;
+}
+
+.btn-right{
+	margin-left:30px;
+	min-width:82px;
+}

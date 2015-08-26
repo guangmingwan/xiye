@@ -1,0 +1,147 @@
+//用户
+CREATE TABLE user(
+id integer primary key  auto_increment ,
+user_id integer,
+user_name varchar(20),
+user_sex varchar(20), 
+user_age varchar(20),
+user_prov varchar(20),
+user_city varchar(20),
+user_phone varchar(20),
+user_pre_income integer,
+user_fam_income integer,
+user_is_marry tinyint(1) DEFAULT '0',
+user_regtime datetime,
+zdxmzd1 varchar(100),
+zdxmzd2 varchar(100),
+zdxmzd3 varchar(100),
+zdxmzd4 varchar(100),
+zdxmzd5 varchar(100),
+user_syntime datetime,
+first_allo_employee_id integer,
+first_contact_time datetime,
+first_contact_id integer,
+first_contact_bz varchar(100),
+first_record varchar(100),
+second_allo_employee_id integer,
+second_contact_time datetime,
+second_contact_id integer,
+second_contact_bz varchar(100),
+second_record varchar(100),
+third_allo_employee_id integer,
+third_contact_time datetime,
+third_contact_id integer,
+third_contact_bz varchar(100),
+third_record varchar(100),
+last_allo_employee_id integer,
+last_contact_time datetime,
+last_contact_id integer,
+last_contact_bz varchar(100),
+last_record varchar(100), 
+last_allo_audit_time datetime,
+last_audit_employee_id integer,
+last_audit_time datetime,
+last_audit_id integer,
+last_audit_bz varchar(100),
+final_audit_employee_id integer,
+final_audit_time datetime,
+final_audit_id integer,
+final_audit_bz varchar(100),
+from_id integer,
+user_dup varchar(50),
+proj_id  integer,
+user_last_time datetime
+)DEFAULT CHARSET=utf8;
+
+//接触情况
+CREATE TABLE contact(
+contact_id integer primary key  auto_increment ,
+contact_name varchar(20)
+)DEFAULT CHARSET=utf8;
+
+//项目
+CREATE TABLE proj(
+proj_id integer primary key  auto_increment ,
+proj_name varchar(20),
+proj_bz varchar(100),
+proj_zxcount integer DEFAULT '0',
+proj_ymcount integer DEFAULT '5',
+status_id integer  DEFAULT '1',
+proj_list varchar(1000),
+group_id integer,
+ip varchar(50),
+port varchar(20),
+name varchar(50),
+pwd varchar(20)
+)DEFAULT CHARSET=utf8;
+
+//来源
+CREATE TABLE user_from(
+from_id integer primary key  auto_increment ,
+from_name varchar(50)
+)DEFAULT CHARSET=utf8;
+
+//查询条件
+CREATE TABLE user_select(
+select_id integer primary key  auto_increment ,
+select_field varchar(50),
+select_name varchar(50)
+)DEFAULT CHARSET=utf8;
+
+//项目状态
+CREATE TABLE proj_status(
+status_id integer primary key  auto_increment ,
+status_name varchar(50)
+)DEFAULT CHARSET=utf8;
+
+//设置
+CREATE TABLE sets(
+set_id integer primary key  auto_increment ,
+set_num integer
+)DEFAULT CHARSET=utf8;
+
+//员工
+CREATE TABLE admin(
+admin_id integer primary key  auto_increment ,
+admin_name varchar(50),
+admin_pwd char(50),
+admin_type_id integer,
+group_id integer,
+admin_check_time datetime
+)DEFAULT CHARSET=utf8;
+
+//员工组
+CREATE TABLE admin_group(
+group_id integer primary key  auto_increment ,
+group_name varchar(50),
+group_bz varchar(50),
+group_pwd char(50),
+admin_id integer
+)DEFAULT CHARSET=utf8;
+
+//员工类别
+CREATE TABLE admin_type(
+admin_type_id integer primary key  auto_increment ,
+admin_type_name varchar(50)
+)DEFAULT CHARSET=utf8;
+
+//审核结果
+CREATE TABLE audit_result(
+audit_result_id integer primary key  auto_increment ,
+audit_result_name varchar(20),
+audit_result_type_id integer
+)DEFAULT CHARSET=utf8;
+
+//问卷标题
+CREATE TABLE title(
+title_id integer primary key  auto_increment ,
+title_name varchar(20)
+)DEFAULT CHARSET=utf8;
+
+//问卷
+CREATE TABLE qc(
+id integer primary key  auto_increment ,
+qc_id integer,
+qc_list varchar(1000),
+title_id integer
+)DEFAULT CHARSET=utf8;

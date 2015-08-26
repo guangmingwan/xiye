@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>杭州派诺Panel系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/offcanvas.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script type="text/javascript" src="../scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap-ie.js"></script>
+    <script type="text/javascript" src="../scripts/offcanvas.js"></script>
+    <script type="text/javascript" src="../scripts/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="../scripts/ie-emulation-modes-warning.js"></script>
+    <script type="text/javascript" src="../scripts/function.js"></script>
+    <script type="text/javascript" src="../scripts/upload/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="../scripts/upload/load-image.min.js"></script>
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+    <script type="text/javascript" src="../scripts/upload/jquery.iframe-transport.js"></script>
+    <!-- The basic File Upload plugin -->
+    <script type="text/javascript" src="../scripts/upload/jquery.fileupload.js"></script>
+    <!-- The File Upload processing plugin -->
+    <script type="text/javascript" src="../scripts/upload/jquery.fileupload-process.js"></script>
+    <!-- The File Upload image preview & resize plugin -->
+    <script type="text/javascript" src="../scripts/upload/jquery.fileupload-image.js"></script>
+    <!-- The File Upload audio preview plugin -->
+    <script type="text/javascript" src="../scripts/upload/jquery.fileupload-audio.js"></script>
+    <!-- The File Upload video preview plugin -->
+    <script type="text/javascript" src="../scripts/upload/jquery.fileupload-video.js"></script>
+    <!-- The File Upload validation plugin -->
+    <script type="text/javascript" src="../scripts/upload/jquery.fileupload-validate.js"></script>
+    <script type="text/javascript">
+	   $(document).ready(function() { 
+			pageinit("admin_index");
+			$("#proj_model_1").height($(window).height()-80);
+	   });
+	</script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">杭州派诺Panel系统</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+           <!--<li role="presentation" class="dropdown">
+    		<a class="dropdown-toggle" data-toggle="dropdown"role="button" aria-expanded="false" id="checklist">
+                <button type="button" class="btn btn-xs btn-success btn-lg" onclick="bclick('checkin')" id="checkin">签入</button>
+                <button type="button" class="btn btn-xs btn-default btn-lg" onclick="bclick('checkout')" id="checkout">签出</button>
+                 </a></li>-->
+           <li role="presentation" class="dropdown">
+    		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+     	 登录员工：<span class="label label-primary" id="admin_id"></span><span class="caret"></span>
+   		 </a>
+   		 <ul class="dropdown-menu" role="menu">
+   		 <li><a onclick="loginout()">退出</a></li>
+    		</ul>
+ 			 </li>
+           
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="index.html">项目管理 </a></li>
+            <li><a href="project.html">新建项目</a></li>
+            <li><a href="staff.html">员工管理</a></li>
+            <!--<li><a href="log.html">管理日志</a></li>-->
+            <li id="admin_right"><a href="admin.html">权限管理</a></li>
+          </ul>
+      
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <div class="table-responsive">
+          <div style="overflow-y:auto;max-height:650px" id="proj">
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>项目名称</th>
+                  <th>备注</th>
+                  <th>在线</th>
+                  <th>
+                   <div class="btn-group">
+ 				 <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+   				 项目筛选
+   				 <span class="caret"></span>
+  					</button>
+  				<ul class="dropdown-menu" role="menu">
+       			<li><a onClick="change('status','index=1')">运行</a></li>
+    			<li><a onClick="change('status','index=2')">暂停</a></li>
+   				 <li><a onClick="change('status','index=3')">结束</a></li>
+  				</ul>
+				</div>
+                  </th>
+                  <th>样本查询</th>
+                  <th>接触查询</th>
+                </tr>
+              </thead>
+              <tbody>
+         <tr>
+                  <td>1</td>
+                  <td><a href="#" data-toggle="modal" data-target="#myModal">沃尔玛门店顾客满意度访问1</a>
+                  
+                  </td>
+                  <td></td>
+                  <td>12</td>
+                  <td>正在运行</td>
+                  <td> <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#myModal2">查询</button></td>
+                  <td> <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#myModal3">查询</button></td>
+       </tr>
+       <tr>
+                  <td>2</td>
+                  <td><a href="#" data-toggle="modal" data-target="#myModal">沃尔玛门店顾客满意度访问1</a></td>
+                  <td></td>
+                  <td>10</td>
+                  <td>正在运行</td>
+                  <td> <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#myModal2">查询</button></td>
+                  <td> <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#myModal3">查询</button></td>
+       </tr>
+       <tr>
+                  <td>3</td>
+                  <td><a href="#" data-toggle="modal" data-target="#myModal">沃尔玛门店顾客满意度访问1</a></td>
+                  <td></td>
+                  <td>0</td>
+                  <td>暂停</td>
+                  <td> <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#myModal2">查询</button></td>
+                  <td> <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#myModal3">查询</button></td>
+       </tr>
+       <tr>
+                  <td>4</td>
+                  <td><a href="#" data-toggle="modal" data-target="#myModal">沃尔玛门店顾客满意度访问1</a></td>
+                  <td></td>
+                  <td>0</td>
+                  <td>已结束</td>
+                  <td> <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#myModal2">查询</button></td>
+                  <td> <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#myModal3">查询</button></td>
+       </tr>
+      
+              </tbody>
+            </table>
+            </div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" style="overflow-y:auto" id="proj_model_1">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">编辑项目</h4>
+      </div>
+      <div class="modal-body">
+<form class="form-horizontal" id="proj_model">
+<div class="row">
+<div class="col-sm-5">
+<input type="in" class="form-control" style="display:none" name="proj_id">
+  <div class="form-group">
+    <label  class="col-sm-4 control-label">项目名称：</label>
+    <div class="col-sm-8">
+      <input type="in" class="form-control" name="proj_name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label">项目备注：</label>
+    <div class="col-sm-8">
+      <input type="in" class="form-control" name="proj_bz">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-4 control-label">样本状态：</label>
+    <div class="col-sm-8">
+    <select class="form-control" name="status_id">
+    	<option value="1">正在运行</option>
+        <option value="2">暂停</option>
+        <option value="3">结束</option>
+    </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label">员工组：</label>
+    <div class="col-sm-8">
+    
+    <select class="form-control" name="group_id">
+    	<option value="1">华润万家组</option>
+        <option value="2">万象组</option>
+        <option value="3">沃尔玛组</option>
+    </select>
+    
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label">样本导入：</label>
+    <div class="col-sm-8">
+            <div class="btn-group">
+ 				 <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+   				 
+   				 <span class="caret"></span>
+  					</button>
+  				<ul class="dropdown-menu" role="menu">
+       			<li><a href="#">xxxx</a></li>
+  				</ul>
+				</div>
+				<button type="button" class="btn btn-default">添加单个样本</button>
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label">样本导出：</label>
+    <div class="col-sm-8">
+                  <div class="btn-group">
+ 				 <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+   				 
+   				 <span class="caret"></span>
+  					</button>
+  				<ul class="dropdown-menu" role="menu">
+       			<li><a href="#">xxxx</a></li>
+  				</ul>
+				</div>
+				<button type="button" class="btn btn-default">导出</button>
+    </div>
+  </div>
+    <div class="form-group">
+    
+    <div class="col-sm-12">
+     <h5 class="sub-header">数据库设定</h5>
+     <div  class="form-group">  
+         <label class="left-2 control-label">地址：</label>
+         <div class="left-4">
+            <input type="in" class="form-control" name="ip">
+         </div>
+         <label class="left-2 control-label">端口：</label>
+         <div class="left-2">
+            <input type="in" class="form-control" name="port">
+         </div>
+     </div>
+     <div class="form-group">
+         <label class="left-2 control-label">账号：</label>
+         <div class="left-4">
+            <input type="in" class="form-control" name="name">
+         </div>
+         <label class="left-2 control-label">密码：</label>
+         <div class="left-2">
+            <input type="password" class="form-control" name="pwd">
+         </div>
+     </div>
+     <button type="button" class="btn btn-primary" onClick="bclick('connect')">连接测试</button>
+    </div>
+    </div>
+  
+</div>
+<div class="col-sm-6">
+			员工可见字段设置：
+            <table class="table table-striped table-bordered" id="showlist">
+              <thead>
+              </thead>
+              <tbody>
+               <tr>
+                  <td>姓名</td>
+                  <td><input type="checkbox" value="" name="user_name"></td>
+              </tr>
+         	  <tr>
+                  <td>性别</td>
+                  <td><input type="checkbox" value="" name="user_sex"></td>
+              </tr>
+              <tr>
+                  <td>年龄</td>
+                  <td><input type="checkbox" value="" name="user_age"></td>
+              </tr>  
+              <tr>
+                  <td>省份</td>
+                  <td><input type="checkbox" value="" name="user_prov"></td>
+              </tr>  
+              <tr>
+                  <td>城市</td>
+                  <td><input type="checkbox" value="" name="user_city"></td>
+              </tr>  
+              <tr>
+                  <td>电话号码</td>
+                  <td><input type="checkbox" value="" name="user_phone"></td>
+              </tr>
+              <tr>
+                  <td>个人年收入</td>
+                  <td><input type="checkbox" value="" name="user_pre_income"></td>
+              </tr>
+              <tr>
+                  <td>家庭年收入</td>
+                  <td><input type="checkbox" value="" name="user_fam_income"></td>
+              </tr>  
+              <tr>
+                  <td>婚姻状况</td>
+                  <td><input type="checkbox" value="" name="user_is_marry"></td>
+              </tr>  
+              <tr>
+                  <td>报名时间</td>
+                  <td><input type="checkbox" value="" name="user_regtime"></td>
+              </tr>  
+              <tr>
+                  <td>针对项目字段1</td>
+                  <td><input type="checkbox" value="" name="zdxmzd1"></td>
+              </tr>  
+              <tr>
+                  <td>针对项目字段2</td>
+                  <td><input type="checkbox" value="" name="zdxmzd2"></td>
+              </tr>
+              <tr>
+                  <td>针对项目字段3</td>
+                  <td><input type="checkbox" value="" name="zdxmzd3"></td>
+              </tr>  
+              <tr>
+                  <td>针对项目字段4</td>
+                  <td><input type="checkbox" value="" name="zdxmzd4"></td>
+              </tr> 
+              <tr>
+                  <td>针对项目字段5</td>
+                  <td><input type="checkbox" value="" name="zdxmzd5"></td>
+              </tr> 
+              
+ </tbody>
+            </table>
+
+
+</div>
+</div>
+
+
+</form>
+
+    
+         </div>
+      <div class="modal-footer">
+              <button type="button" class="btn btn-primary" onClick="save('proj')">确定</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+				<div class="modal fade bs-example-modal-lg" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel2">项目名称 沃尔玛门店顾客满意度访问1</h4>
+        <input class="hidden" id="proj_id_2">
+      </div>
+      <div class="modal-body">
+<div class="row">
+<div class="col-sm-12">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">查询条件:</h3>
+  </div>
+  <div class="panel-body">
+    <input type="text" class="form-control-2"> <div class="form-kg">=</div>  <input type="text" class="form-control-2">  	<select class="form-kg form-control-1"> <option>and</option><option>or</option></select>
+  </div>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">查询条件:</h3>
+  </div>
+  <div class="panel-body">
+    <input type="text" class="form-control-2"> <div class="form-kg">=</div>  <input type="text" class="form-control-2">  	<select class="form-kg form-control-1"> <option>and</option><option>or</option></select>
+  </div>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">查询条件:</h3>
+  </div>
+  <div class="panel-body">
+    <input type="text" class="form-control-2"> <div class="form-kg">=</div>  <input type="text" class="form-control-2">  	<select class="form-kg form-control-1"> <option>and</option><option>or</option></select>
+  </div>
+</div>
+</div>
+
+</div>
+   
+         </div>
+      <div class="modal-footer">
+              <button type="button" class="btn btn-primary">点击查询</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消查询</button>
+
+      </div>
+    </div>
+  </div>
+</div>	
+
+
+
+     
+       
+<div class="modal fade bs-example-modal-lg" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel3">项目名称 沃尔玛门店顾客满意度访问1</h4>
+        <input class="hidden" id="proj_id_3">
+      </div>
+      <div class="modal-body">
+<div class="row">
+<div class="col-sm-12">
+<div class="col-sm-4">
+<ul class="list-group">
+  <li class="list-group-item">
+    <span class="badge" id="zyb">10003</span>
+    样本总数:
+  </li>
+  <li class="list-group-item">
+    <span class="badge" id="jcyb">80003</span>
+    接触样本:
+  </li>
+  <li class="list-group-item">
+    <span class="badge" id="wjcyb">2000</span>
+    未接触样本:
+  </li>
+</ul>
+</div>
+</div>
+
+<div class="col-sm-12">
+<div class="col-sm-6">
+<ul class="list-group">
+  <h4>
+    历史统计:
+  </h4>
+  <li class="list-group-item">
+    <span class="badge" id="ls_fwcg">3000</span>
+    成功总数:
+  </li>
+  <li class="list-group-item">
+    <span class="badge" id="ls_yyfw">12</span>
+    预约总数:
+  </li>
+  <li class="list-group-item">
+    <span class="badge" id="ls_kcjf">55</span>
+    开场拒访数:
+  </li>
+  <li class="list-group-item">
+    <span class="badge" id="ls_ztjf">77</span>
+    中途拒访数:
+  </li>
+   <li class="list-group-item">
+    <span class="badge" id="ls_sb"></span>
+    失败总数
+  </li>
+</ul>
+</div>
+<div class="col-sm-6">
+<ul class="list-group">
+  <h4>
+    今日统计:
+  </h4>
+  <li class="list-group-item">
+    <span class="badge" id="jr_fwcg">55</span>
+    成功总数:
+  </li>
+  <li class="list-group-item">
+    <span class="badge" id="jr_yyfw">1</span>
+    预约总数:
+  </li>
+  <li class="list-group-item">
+    <span class="badge" id="jr_kcjf">4</span>
+    开场拒访数:
+  </li>
+  <li class="list-group-item">
+    <span class="badge" id="jr_ztjf">34</span>
+    中途拒访数:
+  </li>
+   <li class="list-group-item">
+    <span class="badge" id="jr_sb"></span>
+    失败总数
+  </li>
+</ul>
+</div>
+</div>
+<div class="col-sm-12 form-inline">
+<h4> 单样本查询：</h4>
+<div class="form-group">
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon2">请输入号码</span>
+  <input type="text" class="form-control" aria-describedby="sizing-addon2" id="user_phone">
+  <span class="input-group-btn">
+        <button class="btn btn-primary" type="button" onClick="query('proj_user_2')">查询</button>
+      </span>
+      </div>
+</div>
+<label style="margin-left:20px" id="contact_name"></label>
+</div>
+
+</div>
+       </div>
+      <div class="modal-footer">
+              
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消查询</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+           
+
+<nav>
+  <ul class="pagination hidden">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+   	<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>

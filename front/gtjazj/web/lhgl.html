@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+<title>留痕管理</title>
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/wxgl.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-ie6.css">
+<link rel="stylesheet" type="text/css" href="css/ie.css">
+<link rel="stylesheet" type="text/css" href="css/comm.css"/>
+<script src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap-ie.js"></script>
+<script type="text/javascript" src="scripts/My97DatePicker/WdatePicker.js"></script>
+<script src="scripts/function.js"></script>
+</head>
+<body>
+<h1 class="text-center">留痕管理</h1><br>
+<div id="lhgl"  class="form-horizontal"><!-- simple frame -->
+	<div class="form-group">
+      <label class="col-xs-2 col-sm-2 control-label" style="margin-left:3%;width: 16.666666666666664%;">客户号:</label>
+      <div class="col-xs-3 col-sm-3">
+        <input name="select_custid" class="form-control" placeholder="">
+      </div>
+      <label class="col-xs-2 col-sm-2 control-label">类别:</label>
+      <div class="col-xs-3 col-sm-3">
+        <select name="select_get_type_id" class="form-control" placeholder=""></select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-xs-2 col-sm-2 control-label" style="margin-left:3%;width: 16.666666666666664%;">客户名称:</label>
+      <div class="col-xs-3 col-sm-3">
+        <input name="select_user_name" class="form-control" placeholder="">
+      </div>
+      <label class="col-xs-2 col-sm-2 control-label">营业部编号:</label>
+      <div class="col-xs-3 col-sm-3">
+        <input name="select_brhid" class="form-control" placeholder="">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-xs-2 col-sm-2 control-label" style="margin-left:3%;width: 16.666666666666664%;">起始日期:</label>
+      <div class="col-xs-3 col-sm-3">
+        <input name="select_begin_date" class="Wdate form-control" placeholder="">
+      </div>
+      <label class="col-xs-2 col-sm-2 control-label">结束日期:</label>
+      <div class="col-xs-3 col-sm-3">
+        <input name="select_end_date" class="Wdate form-control" placeholder="">
+      </div>
+    </div>
+    <br>
+    <div class="text-center  form-group">
+      <button class="btn btn-primary" type="button" onClick="query('user_record')">查询</button>
+      <button class="btn btn-primary btn-right" type="button" onClick="showhtml('wxgl.html')">微信管理</button>
+    </div>
+   <br> 
+  <table border = "1" class="table table-bordered  table-hover ">
+    <thead>
+      <tr>
+        <th >客户号</th>
+        <th >客户名称</th>
+        <th >营业部编号</th>
+        <th >类别</th>
+        <th style="width:220px">内容</th>
+        <th style="width:180px">时间</th>
+        <th >单日次数</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+    </tfoot>
+  </table>
+  <div class="search-for">
+    <p class="paging text-center"><a id="prePage" >上一页</a> | 1/1 | <a id="nextPage" >下一页</a></p>
+  </div>
+</div>
+</body>
+
+<script type="text/javascript">
+   $(document).ready(function() { 
+   		$(".Wdate").click(function(){
+			WdatePicker({isShowClear:true,dateFmt:'yyyy-MM-dd'});
+		});
+		$(".Wdate").css("height","34px");
+		
+   		main("query_get_type");
+   });
+</script>
+</html>

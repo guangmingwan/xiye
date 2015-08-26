@@ -1,0 +1,114 @@
+td input{
+	background-color: transparent;
+	border:none;
+	width:100%;
+	height:100%;
+	margin-top:-1px;
+	margin-bottom:-1px;
+}
+
+td textarea{
+	width:200px;
+	height:200px;
+}
+
+td img{
+	width:100px;
+	height:100px;
+}
+
+td iframe{
+	width:200px;
+	height:200px;
+}
+
+.rounded-corners:active{
+ cursor:pointer
+}
+.rounded-corners:hover{
+ cursor:pointer
+}
+
+.buttonindex:active{
+ cursor:pointer;
+ border-color: red;
+}
+.buttonindex:hover{
+ cursor:pointer;
+}
+
+#prePage:active,#prePage:hover,#nextPage:active,#nextPage:hover{
+	cursor:pointer;
+}
+
+#u1823-4:active,#u1823-4:hover,#u2332-4:active,#u2332-4:hover,u3009-4:active,#u3009-4:hover{
+ cursor:pointer
+}
+
+.table{
+	margin-left:auto;
+	margin-right:auto;
+	width:90%;
+}
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+/* Fixes for IE < 8 */
+@media screen\9 {
+  .fileinput-button input {
+    filter: alpha(opacity=0);
+    font-size: 100%;
+    height: 100%;
+  }
+}
+
+.img-thumbnail:hover, .img-thumbnail:focus {
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6)
+}
+
+canvas:hover, canvas:focus {
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6)
+}
+
+.carousel-control{position:absolute;top:40%;left:15px;width:40px;height:40px;margin-top:-20px;font-size:60px;font-weight:100;line-height:30px;color:#ffffff;text-align:center;background:#222222;border:3px solid #ffffff;-webkit-border-radius:23px;-moz-border-radius:23px;border-radius:23px;opacity:0.5;filter:alpha(opacity=50);}.carousel-control.right{left:auto;right:15px;}
+.carousel-control:hover,.carousel-control:focus{color:#ffffff;text-decoration:none;opacity:0.9;filter:alpha(opacity=90);}
+
+.form-group .col-sm-offset-1{
+	margin-left:8.333333333333332%;
+}
+
+.form-horizontal .col-sm-4 {
+	width: 33.33333333333333%;
+}
+
+.form-horizontal .col-sm-3 {
+	width: 25%;
+}
+
+.form-horizontal .col-sm-2 {
+	width: 16.666666666666664%;
+}
+
+.row{
+	margin-left:-15px;
+}

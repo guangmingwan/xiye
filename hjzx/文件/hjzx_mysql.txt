@@ -1,0 +1,189 @@
+//用户
+CREATE TABLE user(
+id integer primary key  auto_increment ,
+user_id integer,
+user_name varchar(20),
+user_sex varchar(20), 
+user_age varchar(20),
+user_prov varchar(20),
+user_city varchar(20),
+user_phone varchar(20),
+user_pre_income integer,
+user_fam_income integer,
+user_is_marry tinyint(1) DEFAULT '0',
+user_regtime datetime,
+zdxmzd1 varchar(100),
+zdxmzd2 varchar(100),
+zdxmzd3 varchar(100),
+zdxmzd4 varchar(100),
+zdxmzd5 varchar(100),
+user_syntime datetime,
+first_allo_employee_id integer,
+first_contact_time datetime,
+first_contact_result varchar(100),
+second_allo_employee_id integer,
+second_contact_time datetime,
+second_contact_result varchar(100),
+third_allo_employee_id integer,
+third_contact_time datetime,
+third_contact_result varchar(100),
+employee_audit_result varchar(100),
+final_audit_result varchar(100),
+record1 varchar(100),
+record2 varchar(100),
+record3 varchar(100)
+)DEFAULT CHARSET=utf8;
+
+//用户椰果兑换物品表
+CREATE TABLE user_yg_dh_wp(
+dh_wp_id integer primary key  auto_increment ,
+user_id integer,
+yg_sl integer,
+dh_wp_type_id integer,
+dh_wp_sl double,
+dh_is_suc  tinyint(1) DEFAULT '0',
+dh_time datetime
+)DEFAULT CHARSET=utf8;
+
+//兑换物品类别
+CREATE TABLE dh_wp_type(
+dh_wp_type_id integer primary key  auto_increment ,
+dh_wp_type_name varchar(500),
+dh_wp_type_fx tinyint DEFAULT '0'
+)DEFAULT CHARSET=utf8;
+
+//客户公司
+CREATE TABLE client(
+client_id integer primary key  auto_increment ,
+client_name varchar(500),
+client_jj varchar(500),
+client_xz_id varchar(500),
+client_gm varchar(500),
+client_xyd varchar(500),
+client_company_type_id tinyint(1) DEFAULT '0'
+)DEFAULT CHARSET=utf8;
+
+
+//公司性质
+CREATE TABLE company_xz(
+company_xz_id integer primary key  auto_increment ,
+company_xz_name varchar(500)
+)DEFAULT CHARSET=utf8;
+
+
+//员工
+CREATE TABLE staff(
+staff_id integer primary key  auto_increment ,
+staff_name varchar(500),
+staff_origo varchar(50),
+staff_gzjy varchar(50),
+staff_type_id integer
+)DEFAULT CHARSET=utf8;
+
+//员工工种
+CREATE TABLE staff_type(
+staff_type_id integer primary key  auto_increment ,
+staff_type_name varchar(500)
+)DEFAULT CHARSET=utf8;
+
+//活动问卷
+CREATE TABLE action(
+action_id integer primary key  auto_increment ,
+action_name varchar(500),
+action_type_id integer,
+action_content varchar(500),
+action_pic varchar(500),
+action_zt_type_id integer,
+action_zyb integer,
+action_ywc_yb integer,
+action_wwc_yb integer,
+action_begintime datetime,
+action_endtime datetime,
+action_client_id integer,
+action_zx_client_id integer,
+action_cy_sl integer,
+action_zb_sl integer,
+action_suc_sl integer,
+action_price double,
+action_tg_price double,
+action_yg_sl integer,
+action_sytg_price double,
+action_yslq_sl integer,
+action_fflq_sl integer,
+action_sylq_sl integer,
+action_cb_1 double,
+action_cb_2 double,
+action_cb_3 double,
+action_cb_4 double,
+action_mll varchar(50)
+)DEFAULT CHARSET=utf8;
+
+//活动问卷题目 问卷类型/问卷题型/关联逻辑/随机类型/序号
+CREATE TABLE action_wj(
+action_wj_id integer primary key  auto_increment ,
+action_wj_name varchar(500),
+action_wj_name_extend varchar(500),
+action_id integer,
+action_wj_type_id integer,
+action_wj_tx_type_id integer,
+action_wj_tx_type varchar(500),
+action_sj_type_id integer,
+action_wj_xh_id integer,
+action_wj_bz varchar(500)
+)DEFAULT CHARSET=utf8;
+
+//问卷明细
+CREATE TABLE action_wj_mx(
+action_wj_mx_id integer primary key  auto_increment ,
+action_wj_mx_name varchar(500),
+action_wj_id integer,
+action_wj_mx_xh_id integer
+)DEFAULT CHARSET=utf8;
+
+//题目类型
+CREATE TABLE action_wj_type(
+action_wj_type_id integer primary key  auto_increment ,
+action_wj_type_name varchar(500)
+)DEFAULT CHARSET=utf8;
+
+//活动类型
+CREATE TABLE action_type(
+action_type_id integer primary key  auto_increment ,
+action_type_name varchar(500)
+)DEFAULT CHARSET=utf8;
+
+//活动状态
+CREATE TABLE action_zt_type(
+action_zt_type_id integer primary key  auto_increment ,
+action_zt_type_name varchar(500)
+)DEFAULT CHARSET=utf8;
+
+//活动参与 问卷回答格式:题目id/答案|题目id/答案
+CREATE TABLE action_join(
+action_join_id integer primary key  auto_increment ,
+user_id integer,
+action_id integer,
+action_bm_time datetime,
+action_fwjs_time datetime,
+action_wj_hd varchar(500);
+action_is_suc tinyint(1) DEFAULT '0'
+)DEFAULT CHARSET=utf8;
+
+
+//活动兑换椰果
+CREATE TABLE action_dh_wp(
+dh_wp_id integer primary key  auto_increment ,
+user_id integer,
+action_id integer,
+dh_wp_type_id integer,
+dh_wp_sl integer,
+staff_id integer,
+dh_time datetime
+)DEFAULT CHARSET=utf8;
+
+CREATE TABLE xxts(
+xxts_id integer primary key  auto_increment ,
+xxts_content varchar(500),
+xxts_addtime datetime,
+xxts_ishavesend tinyint(1) DEFAULT '0'
+)DEFAULT CHARSET=utf8;

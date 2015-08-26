@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>杭州派诺Panel系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/offcanvas.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">杭州派诺Panel系统</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+        
+          <ul class="nav navbar-nav navbar-right">
+          <li role="presentation" class="dropdown">
+    		<a class="dropdown-toggle" data-toggle="dropdown"role="button" aria-expanded="false">
+                <button type="button" class="btn btn-xs btn-success btn-lg">签入</button>
+                <button type="button" class="btn btn-xs btn-default btn-lg">签出</button>
+                 </a></li>
+           <li role="presentation" class="dropdown">
+    		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+     	 登录员工：<span class="label label-primary">150001</span><span class="caret"></span>
+   		 </a></li>
+   		 <ul class="dropdown-menu" role="menu">
+   		 <li><a href="#">退出</a></li>
+    		</ul>
+ 			 </li>
+           
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="index.html">今日接触 <span class="sr-only">(current)</span></a></li>
+            <li><a href="audit.html">今日审核</a></li>
+            <li><a href="statistical.html">工作统计</a></li>
+            <li><a href="#">项目信息</a></li>
+          </ul>
+      
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>电话号码</th>
+                  <th>姓名</th>
+                  <th>性别</th>
+                  <th>年龄</th>
+                  <th>城市</th>
+                  <th>接触情况</th>
+                  <th>录音上传</th>
+                  <th>提交</th>
+                </tr>
+              </thead>
+              <tbody>
+         <tr>
+                  <td>10086</td>
+                  <td>张三</td>
+                  <td>男</td>
+                  <td>21</td>
+                  <td>杭州</td>
+                  <td>
+                  <div class="btn-group">
+ 				 <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+   				 满意
+   				 <span class="caret"></span>
+  					</button>
+  				<ul class="dropdown-menu" role="menu">
+       			<li><a href="#">接触成功</a></li>
+    			<li><a href="#">预约访问</a></li>
+   				 <li><a href="#">开场拒访</a></li>
+   				 <li><a href="#">中途拒访</a></li>
+   				 <li><a href="#">其他情况(备注)</a></li>
+  				</ul>
+				</div>
+                  </td>
+                  <td>
+                <button type="button" class="btn btn-xs btn-primary">上传</button>
+                  </td>
+                  <td>
+                <button type="button" class="btn btn-xs btn-warning">提交</button>
+                  </td>
+       </tr>
+        <tr>
+                  <td>10086</td>
+                  <td>张三</td>
+                  <td>男</td>
+                  <td>21</td>
+                  <td>杭州</td>
+                  <td>
+                  <div class="btn-group">
+ 				 <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+   				 满意
+   				 <span class="caret"></span>
+  					</button>
+  				<ul class="dropdown-menu" role="menu">
+       			<li><a href="#">接触成功</a></li>
+    			<li><a href="#">预约访问</a></li>
+   				 <li><a href="#">开场拒访</a></li>
+   				 <li><a href="#">中途拒访</a></li>
+   				 <li><a href="#">其他情况(备注)</a></li>
+  				</ul>
+				</div>
+                  </td>
+                  <td>
+                <button type="button" class="btn btn-xs btn-primary">上传</button>
+                  </td>
+                  <td>
+                <button type="button" class="btn btn-xs btn-warning">提交</button>
+                  </td>
+       </tr>         
+        <tr>
+                  <td>10086</td>
+                  <td>张三</td>
+                  <td>男</td>
+                  <td>21</td>
+                  <td>杭州</td>
+                  <td>
+                  <div class="btn-group">
+ 				 <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+   				 满意
+   				 <span class="caret"></span>
+  					</button>
+  				<ul class="dropdown-menu" role="menu">
+				<li><a href="#">接触成功</a></li>
+    			<li><a href="#">预约访问</a></li>
+   				 <li><a href="#">开场拒访</a></li>
+   				 <li><a href="#">中途拒访</a></li>
+   				 <li><a href="#">其他情况(备注)</a></li>
+  				</ul>
+				</div>
+                  </td>
+                  <td>
+                <button type="button" class="btn btn-xs btn-primary">上传</button>
+                  </td>
+                  <td>
+                <button type="button" class="btn btn-xs btn-warning">提交</button>
+                  </td>
+       </tr>         
+          <tr>
+                  <td>10086</td>
+                  <td>张三</td>
+                  <td>男</td>
+                  <td>21</td>
+                  <td>杭州</td>
+                  <td>
+                  <div class="btn-group">
+ 				 <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+   				 满意
+   				 <span class="caret"></span>
+  					</button>
+  				<ul class="dropdown-menu" role="menu">
+				<li><a href="#">接触成功</a></li>
+    			<li><a href="#">预约访问</a></li>
+   				 <li><a href="#">开场拒访</a></li>
+   				 <li><a href="#">中途拒访</a></li>
+   				 <li><a href="#">其他情况(备注)</a></li>
+  				</ul>
+				</div>
+                  </td>
+                  <td>
+                <button type="button" class="btn btn-xs btn-primary">上传</button>
+                  </td>
+                  <td>
+                <button type="button" class="btn btn-xs btn-warning">提交</button>
+                  </td>
+       </tr>  
+          <tr>
+                  <td>10086</td>
+                  <td>张三</td>
+                  <td>男</td>
+                  <td>21</td>
+                  <td>杭州</td>
+                  <td>
+                  <div class="btn-group">
+ 				 <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+   				 满意
+   				 <span class="caret"></span>
+  					</button>
+  				<ul class="dropdown-menu" role="menu">
+				<li><a href="#">接触成功</a></li>
+    			<li><a href="#">预约访问</a></li>
+   				 <li><a href="#">开场拒访</a></li>
+   				 <li><a href="#">中途拒访</a></li>
+   				 <li><a href="#">其他情况(备注)</a></li>
+  				</ul>
+				</div>
+                  </td>
+                  <td>
+                <button type="button" class="btn btn-xs btn-primary">上传</button>
+                  </td>
+                  <td>
+                <button type="button" class="btn btn-xs btn-warning">提交</button>
+                  </td>
+       </tr>  
+          <tr>
+                  <td>10086</td>
+                  <td>张三</td>
+                  <td>男</td>
+                  <td>21</td>
+                  <td>杭州</td>
+                  <td>
+                  <div class="btn-group">
+ 				 <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+   				 满意
+   				 <span class="caret"></span>
+  					</button>
+  				<ul class="dropdown-menu" role="menu">
+				<li><a href="#">接触成功</a></li>
+    			<li><a href="#">预约访问</a></li>
+   				 <li><a href="#">开场拒访</a></li>
+   				 <li><a href="#">中途拒访</a></li>
+   				 <li><a href="#">其他情况(备注)</a></li>
+  				</ul>
+				</div>
+                  </td>
+                  <td>
+                <button type="button" class="btn btn-xs btn-primary">上传</button>
+                  </td>
+                  <td>
+                <button type="button" class="btn btn-xs btn-warning">提交</button>
+                  </td>
+       </tr>  
+              </tbody>
+            </table>
+
+<nav>
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+   	<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="js/offcanvas.js"></script>
+  </body>
+</html>

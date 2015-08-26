@@ -1,0 +1,65 @@
+<!-- saved from url=(0039)http://114.141.166.14/wx/disclaimer.jsp -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>报告</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/function.js"></script>
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="text-center"><img src="img/logo.jpg"></div>
+      <br>
+      <div style="max-width: 400px; margin: 0 auto 10px;">
+        <div name="user_div" style="display:none">尊敬的'<span name="user_name"></span>'先生/女士您好，您所查找的报告为：</div><br>
+        <div name="reply_title" style="font-family:宋体;color:#2E53C2">市场高估2014年的外需改善   报告作者： 韦志超,汪进</div>
+        <br>
+        <div >报告日期 : <span name="reply_date">2014-03-24</span></div>
+        <br>
+        <br>
+        <div name="reply_list">市场高估2014年外需改善的幅度。 2014年发达经济体持续弱复苏基本成 为市场共识，因此市场预期外贸也会 同等好转。我们发现，GDP增长与外 贸增长并无必然一致性。特别在金融 危机后发达经济体的外贸增速要弱于 GDP增速，在短期内难以改变。
+          
+          发达经济体此轮复苏更多是由内需拉 动。发达经济体贸易占比并不高，此 轮复苏更多是房地产等内需拉动，和 外贸关系不大，因此在近年来美国和 欧元区出现了GDP增速和外贸增速背 离的情况。日本的经济增速和外贸增 速较为一致，但是日本外贸在全球占 比较少，难以影响全局。
+          
+          中国经济下行和新兴国家分化加大外 需回暖压力。2014年中国经济下行是 市场共识，而中国是商品贸易大国， 因此对全球外需影响较大。新兴国家 在QE退出背景下出现分化，难以支撑 外需来改善大局。
+          我们预计，2014年中国出口实际增长 7.5%，而统计上增长5%，低于市场 预期的8.2%。 </div>
+        <br>
+        <br>
+        <div align="center"><a href="flsm.html">法律申明</a></div>
+        <br>
+        <div style="font-family:宋体;color:blue; text-indent:28px">微信：国泰君安浙江研究（微信号：gtjazj888）您可以通过“查看公众号”来关注我们。</div>
+        <div style="font-family:宋体;color:blue; text-indent:28px">如需进一步了解本服务号相关的详细信息，敬请联系国泰君安证券浙江分公司范寅（0571-87245610）</div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+   $(document).ready(function() { 
+   		var action_id=getQueryStringByName("action_id");
+		if(action_id!=""){
+   			main("querylist","action_id="+action_id,"false","1");
+		}
+		
+		var fromusername=getQueryStringByName("fromusername");
+		if(fromusername!=""){
+   			main("queryuserinfo","user_wx_bs="+fromusername);
+			$("[name='user_div']").show();
+		}
+		else{
+			$("[name='user_div']").hide();
+		}
+   });
+</script>
+</html>

@@ -1,0 +1,37 @@
+time: 2015-02-02 13:56:49
+
+request: 
+<xml><ToUserName><![CDATA[gh_fb5ae0f869c9]]></ToUserName>
+<FromUserName><![CDATA[o9ArDjndmmzQEr-zl5oYurT0iOw0]]></FromUserName>
+<CreateTime>1422856609</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+Array
+(
+    [signature] => 922bbd13423c26fa74c8d409fb5cd06546979b10
+    [timestamp] => 1422856609
+    [nonce] => 429141294
+)
+
+reply: 
+<xml>
+<ToUserName><![CDATA[o9ArDjndmmzQEr-zl5oYurT0iOw0]]></ToUserName>
+<FromUserName><![CDATA[gh_fb5ae0f869c9]]></FromUserName>
+<CreateTime>1422856609</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA["国泰君安证券浙江分公司"欢迎您，我们为您提供最及时、最符合市场动向的资讯服务，让您体验国泰君安证券的特色高端服务！ 精彩信息欢迎点击下方菜单。]]></Content>
+<FuncFlag>0</FuncFlag>
+</xml>
+subscribe||
+
+
+del: 
+/var/www/front/gtjazj/log/.
+/var/www/front/gtjazj/log/..
+/var/www/front/gtjazj/log/2015-01-27 18.txt
+/var/www/front/gtjazj/log/2015-01-28 16.txt
+/var/www/front/gtjazj/log/2015-01-29 19.txt
+/var/www/front/gtjazj/log/2015-02-02 10.txt
+

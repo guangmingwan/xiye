@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>杭州派诺Panel系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/offcanvas.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+   
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap-ie.js"></script>
+    <script type="text/javascript" src="scripts/offcanvas.js"></script>
+    <script type="text/javascript" src="scripts/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="scripts/ie-emulation-modes-warning.js"></script>
+    <script type="text/javascript" src="scripts/function.js"></script>
+    <script type="text/javascript">
+	   $(document).ready(function() { 
+			pageinit("login");
+	   });
+	</script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body">
+ <div class="container">
+
+      <form class="form-signin">
+        <h1 class="form-signin-heading">杭州派诺Panel系统</h1>
+        <br>
+        <label for="inputEmail" class="sr-only">账号</label>
+        <input  id="admin_name" type="id" id="inputEmail" class="form-control" placeholder="账号" required autofocus>
+        <br>
+        <label for="inputPassword" class="sr-only">密码</label>
+        <input  id="admin_pwd"  type="password" id="inputPassword" class="form-control" placeholder="密码" required>
+        <div class="checkbox">
+          <label>
+            <input id="admin_remenber" type="checkbox"> 保存账号
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block"  type="button" onClick="login()">登陆</button>
+      </form>
+
+    </div> <!-- /container -->
+  </div>
+  </div>
+  
+  
+  </body>
+</html>

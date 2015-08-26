@@ -1,0 +1,57 @@
+<!-- saved from url=(0039)http://114.141.166.14/wx/disclaimer.jsp -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>列表</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/function.js"></script>
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="text-center"><img src="img/logo.jpg"></div>
+      <br>
+      <div style="max-width: 400px; margin: 0 auto 10px;">
+        <table  class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th  style="width:290px">标题</th>
+                <th style="width:110px">日期</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+            </tfoot>
+          </table>
+      </div>
+      <br>
+       <br>
+        <div align="center"><a href="flsm.html">法律申明</a><br></div>
+        <div   style="max-width: 400px; margin: 0 auto 10px;">
+       <div style="font-family:宋体;color:blue; text-indent:28px">微信：国泰君安浙江研究（微信号：gtjazj888）您可以通过“查看公众号”来关注我们。</div>
+<div style="font-family:宋体;color:blue; text-indent:28px">如需进一步了解本服务号相关的详细信息，敬请联系国泰君安证券浙江分公司范寅（0571-87245610）</div><br>
+    </div>
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+   $(document).ready(function() { 
+   		var get_event_key=getQueryStringByName("get_event_key");
+		var get_type_id=getQueryStringByName("get_type_id");
+		if(get_event_key!="" || get_type_id!=""){
+   			main("querylist","get_type_id="+get_type_id+"&get_event_key="+get_event_key);
+		}
+   });
+</script>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>title</title>
+	<script language="JavaScript" type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript">
+function go_up(){
+	//$("#new_up").append('<br>文件：<input type="file" name="files[]" multiple />');
+	var str="";
+			str+="<div class=\"pic_file\" >";
+			str+="<input name=\"files[]\"  type=\"file\" multiple>";
+			str+="</div>";
+			$("#new_up").append(str);
+}
+</script>
+</head>
+
+<body>
+<form action="index.php" method="post" encType="multipart/form-data" >
+
+<div id="new_up"></div>
+<input name="username" value="1111112" />
+<input name="kj_id" value="1" />
+<div style="width:680px;height:1px;border-top:1px solid #ccc;"></div>
+            <p>
+            <div style="text-align:center;height:350px">
+                    <div class="caption">
+                    	<div class="file_mx_id" style="display:none">0</div> 
+                    		 
+                    		<div id="files" class="files" style="margin-top:20px;min-height:100px">
+                            </div>
+                        	<p >
+                        	<span class="btn btn-success fileinput-button" onclick="go_up()">
+                            <span>添加文件</span>
+                             </span>
+                             	<div class="fileupload-progress" id="pic_progress" style="display:none;padding-left:100px;padding-right:100px">
+                                <!-- The global progress bar -->
+                                <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                                </div>
+                                <!-- The extended global progress state -->
+                                <div class="progress-extended">&nbsp;</div>
+                            </div>
+                             
+                        </p>
+                    </div>
+                </div></p>
+            <div style="width:680px;height:1px;border-top:1px solid #ccc;"></div>
+            <p class="scts">本地上传，还可以上传3张作业</p>
+
+<input type="submit" value="addzp2" name="cmd"/><br>
+
+</p>
+</form>
+</body>
+</html>

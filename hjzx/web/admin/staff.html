@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>杭州派诺Panel系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/offcanvas.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script type="text/javascript" src="../scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/bootstrap-ie.js"></script>
+    <script type="text/javascript" src="../scripts/offcanvas.js"></script>
+    <script type="text/javascript" src="../scripts/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="../scripts/ie-emulation-modes-warning.js"></script>
+    <script type="text/javascript" src="../scripts/function.js"></script>
+    <script type="text/javascript" src="../scripts/upload/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="../scripts/upload/load-image.min.js"></script>
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+    <script type="text/javascript" src="../scripts/upload/jquery.iframe-transport.js"></script>
+    <!-- The basic File Upload plugin -->
+    <script type="text/javascript" src="../scripts/upload/jquery.fileupload.js"></script>
+    <!-- The File Upload processing plugin -->
+    <script type="text/javascript" src="../scripts/upload/jquery.fileupload-process.js"></script>
+    <!-- The File Upload image preview & resize plugin -->
+    <script type="text/javascript" src="../scripts/upload/jquery.fileupload-image.js"></script>
+    <!-- The File Upload audio preview plugin -->
+    <script type="text/javascript" src="../scripts/upload/jquery.fileupload-audio.js"></script>
+    <!-- The File Upload video preview plugin -->
+    <script type="text/javascript" src="../scripts/upload/jquery.fileupload-video.js"></script>
+    <!-- The File Upload validation plugin -->
+    <script type="text/javascript" src="../scripts/upload/jquery.fileupload-validate.js"></script>
+    <script type="text/javascript">
+	   $(document).ready(function() { 
+			pageinit("admin_staff");
+	   });
+	</script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">杭州派诺Panel系统</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+           <!--<li role="presentation" class="dropdown">
+    		<a class="dropdown-toggle" data-toggle="dropdown"role="button" aria-expanded="false" id="checklist">
+                <button type="button" class="btn btn-xs btn-success btn-lg" onclick="bclick('checkin')" id="checkin">签入</button>
+                <button type="button" class="btn btn-xs btn-default btn-lg" onclick="bclick('checkout')" id="checkout">签出</button>
+                 </a></li>-->
+           <li role="presentation" class="dropdown">
+    		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+     	 登录员工：<span class="label label-primary" id="admin_id"></span><span class="caret"></span>
+   		 </a>
+   		 <ul class="dropdown-menu" role="menu">
+   		 <li><a onclick="loginout()">退出</a></li>
+    		</ul>
+ 			 </li>
+           
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="index.html">项目管理 </a></li>
+            <li><a href="project.html">新建项目</a></li>
+            <li class="active"><a href="staff.html">员工管理</a></li>
+            <!--<li><a href="log.html">管理日志</a></li>-->
+             <li id="admin_right"><a href="admin.html">权限管理</a></li>
+          </ul>
+      
+        </div>
+        <div class="col-sm-12 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+         <div class="col-sm-5">
+         <h4> 员工管理 </h4>
+         
+        <div style="overflow-y:auto;max-height:650px" id="admin_staff">
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>编号</th>
+                  <th>密码</th>
+                  <th>员工组</th>
+                </tr>
+              </thead>
+              <tbody>
+         <tr>
+                  <td><input type="checkbox" value=""></td>
+                  <td>2015001</td>
+                  <td>12456</td>
+                  <td>员工组1</td>
+         </tr>
+         <tr>
+                  <td><input type="checkbox" value=""></td>
+                  <td>2015001</td>
+                  <td>12456</td>
+                  <td>员工组1</td>
+         </tr>
+         <tr>
+                  <td><input type="checkbox" value=""></td>
+                  <td>2015001</td>
+                  <td>12456</td>
+                  <td>员工组1</td>
+         </tr>
+         <tr>
+                  <td><input type="checkbox" value=""></td>
+                  <td>2015001</td>
+                  <td>12456</td>
+                  <td>员工组1</td>
+         </tr>
+         <tr>
+                  <td><input type="checkbox" value=""></td>
+                  <td>2015001</td>
+                  <td>12456</td>
+                  <td>员工组1</td>
+         </tr>
+         <tr>
+                  <td><input type="checkbox" value=""></td>
+                  <td>2015001</td>
+                  <td>12456</td>
+                  <td>员工组1</td>
+         </tr>
+         </tbody>
+                  </table>
+                  </div>
+         <nav>
+  <ul class="pagination hidden">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+   	<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+         <div class="panel panel-default">
+  <div class="panel-body">
+<button type="button" class="btn btn-warning"  onClick="newadd('admin_staff')">新建</button>
+<button type="button" class="btn btn-primary"  onClick="newadd('admin_staff_edit')">编辑</button>
+<button type="button" class="btn btn-danger"  onClick="del('admin_staff')">删除</button>
+  </div>
+  
+  <div class="col-sm-6">
+<h2>
+<button type="button" class="btn btn-warning btn-lg" onClick="newadd('admin_staff_2')">批量新建</button>
+</h2>
+</div>
+</div>
+
+
+        </div>
+         <div class="col-sm-6">
+         <h4> 员工组管理 </h4>
+         <div style="overflow-y:auto;max-height:650px" id="admin_group">
+        
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>组名称</th>
+                  <th>组备注</th>
+                  <th>管理密码</th>
+                  <th>督导</th>
+                </tr>
+              </thead>
+              <tbody>
+         <tr>
+                  <td><input type="checkbox" value=""></td>
+                  <td>员工组1</td>
+                  <td></td>
+                  <td>123456</td>
+                  <td>督导1</td>
+         </tr>
+       <tr>
+                  <td><input type="checkbox" value=""></td>
+                  <td>员工组1</td>
+                  <td></td>
+                  <td>123456</td>
+                  <td>督导1</td>
+         </tr>
+          <tr>
+                  <td><input type="checkbox" value=""></td>
+                  <td>员工组1</td>
+                  <td></td>
+                  <td>123456</td>
+                  <td>督导1</td>
+         </tr>
+          <tr>
+                  <td><input type="checkbox" value=""></td>
+                  <td>员工组1</td>
+                  <td></td>
+                  <td>123456</td>
+                  <td>督导1</td>
+         </tr>
+         </tbody>
+                  </table>
+         </div>
+         <nav>
+  <ul class="pagination hidden">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+   	<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+         <div class="panel panel-default">
+  <div class="panel-body">
+<button type="button" class="btn btn-warning"  onClick="newadd('admin_group')">新建员工组</button>
+<button type="button" class="btn btn-primary"  onClick="newadd('admin_group_edit')">编辑员工组</button>
+<button type="button" class="btn btn-danger"  onClick="del('admin_group')">删除员工组</button>
+  </div>
+</div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

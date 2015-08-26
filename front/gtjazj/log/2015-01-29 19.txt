@@ -1,0 +1,137 @@
+time: 2015-01-29 19:35:29
+
+request: 
+<xml><ToUserName><![CDATA[gh_fb5ae0f869c9]]></ToUserName>
+<FromUserName><![CDATA[o9ArDjjeJC8q3tufRONKJTxPsBS8]]></FromUserName>
+<CreateTime>1422531329</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[gtjazj_1_1]]></EventKey>
+</xml>
+Array
+(
+    [signature] => 8fed6a10cd0c24349697dbde1e4bbde10e2827c1
+    [timestamp] => 1422531329
+    [nonce] => 1695994912
+)
+
+reply: 
+<xml>
+<ToUserName><![CDATA[o9ArDjjeJC8q3tufRONKJTxPsBS8]]></ToUserName>
+<FromUserName><![CDATA[gh_fb5ae0f869c9]]></FromUserName>
+<CreateTime>1422531329</CreateTime>
+<MsgType><![CDATA[news]]></MsgType>
+<ArticleCount>1</ArticleCount>
+<Articles>
+<item>
+<Title><![CDATA[最新推荐]]></Title> 
+<Description><![CDATA[1-05：中恒电气 、鹏博士]]></Description>
+<PicUrl><![CDATA[http://115.29.111.115:80/gtjazj/uploadfile/action/action_525.jpg]]></PicUrl>
+<Url><![CDATA[http://115.29.111.115:80/gtjazj/web/reply.html?action_id=525]]></Url>
+</item>
+
+</Articles>
+<FuncFlag>1</FuncFlag>
+</xml>
+CLICK|gtjazj_1_1|select * from get_type where 1=1 and get_event_key='gtjazj_1_1'|select * from user_record where 1=1 and user_wx_bs='o9ArDjjeJC8q3tufRONKJTxPsBS8' and get_event_key='gtjazj_1_1' and last_time like '2015-01-29%'|INSERT INTO user_record(get_type_id,get_type_name,get_event_key,user_wx_bs,last_time,count)VALUES('1','最新推荐','gtjazj_1_1','o9ArDjjeJC8q3tufRONKJTxPsBS8','2015-01-29 19:35:29','1')|select * from action where 1=1 and get_msgtype_id='2' and get_event='click' and get_event_key='gtjazj_1_1' order by action_id desc|3|最新推荐|||1-05：中恒电气 、鹏博士|||http://115.29.111.115:80/gtjazj/uploadfile/action/action_525.jpg|||http://115.29.111.115:80/gtjazj/web/reply.html?action_id=525|
+
+
+del: 
+/var/www/front/gtjazj/log/.
+/var/www/front/gtjazj/log/..
+/var/www/front/gtjazj/log/2015-01-25 01.txt
+/var/www/front/gtjazj/log/2015-01-25 16.txt
+/var/www/front/gtjazj/log/2015-01-27 18.txt
+/var/www/front/gtjazj/log/2015-01-28 16.txt
+
+time: 2015-01-29 19:35:38
+
+request: 
+<xml><ToUserName><![CDATA[gh_fb5ae0f869c9]]></ToUserName>
+<FromUserName><![CDATA[o9ArDjjeJC8q3tufRONKJTxPsBS8]]></FromUserName>
+<CreateTime>1422531338</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[gtjazj_2_1]]></EventKey>
+</xml>
+Array
+(
+    [signature] => e74689bda43fe081728a7f7132d96aa7dffa1fe8
+    [timestamp] => 1422531338
+    [nonce] => 382451043
+)
+
+reply: 
+<xml>
+<ToUserName><![CDATA[o9ArDjjeJC8q3tufRONKJTxPsBS8]]></ToUserName>
+<FromUserName><![CDATA[gh_fb5ae0f869c9]]></FromUserName>
+<CreateTime>1422531338</CreateTime>
+<MsgType><![CDATA[news]]></MsgType>
+<ArticleCount>1</ArticleCount>
+<Articles>
+<item>
+<Title><![CDATA[《行情向更广的行业蔓延》]]></Title> 
+<Description><![CDATA[]]></Description>
+<PicUrl><![CDATA[http://115.29.111.115:80/gtjazj/uploadfile/action/action_523.jpg]]></PicUrl>
+<Url><![CDATA[http://115.29.111.115:80/gtjazj/web/reply.html?action_id=523]]></Url>
+</item>
+
+</Articles>
+<FuncFlag>1</FuncFlag>
+</xml>
+CLICK|gtjazj_2_1|select * from get_type where 1=1 and get_event_key='gtjazj_2_1'|select * from user_record where 1=1 and user_wx_bs='o9ArDjjeJC8q3tufRONKJTxPsBS8' and get_event_key='gtjazj_2_1' and last_time like '2015-01-29%'|INSERT INTO user_record(get_type_id,get_type_name,get_event_key,user_wx_bs,last_time,count)VALUES('5','本周宏观策略','gtjazj_2_1','o9ArDjjeJC8q3tufRONKJTxPsBS8','2015-01-29 19:35:38','1')|select * from action where 1=1 and get_msgtype_id='2' and get_event='click' and get_event_key='gtjazj_2_1' order by action_id desc|3|《行情向更广的行业蔓延》||||||http://115.29.111.115:80/gtjazj/uploadfile/action/action_523.jpg|||http://115.29.111.115:80/gtjazj/web/reply.html?action_id=523|
+
+
+del: 
+/var/www/front/gtjazj/log/.
+/var/www/front/gtjazj/log/..
+/var/www/front/gtjazj/log/2015-01-25 01.txt
+/var/www/front/gtjazj/log/2015-01-25 16.txt
+/var/www/front/gtjazj/log/2015-01-27 18.txt
+/var/www/front/gtjazj/log/2015-01-28 16.txt
+/var/www/front/gtjazj/log/2015-01-29 19.txt
+
+time: 2015-01-29 19:35:38
+
+request: 
+
+Array
+(
+)
+
+reply: 
+
+
+
+
+del: 
+/var/www/front/gtjazj/log/.
+/var/www/front/gtjazj/log/..
+/var/www/front/gtjazj/log/2015-01-25 01.txt
+/var/www/front/gtjazj/log/2015-01-25 16.txt
+/var/www/front/gtjazj/log/2015-01-27 18.txt
+/var/www/front/gtjazj/log/2015-01-28 16.txt
+/var/www/front/gtjazj/log/2015-01-29 19.txt
+
+time: 2015-01-29 19:39:14
+
+request: 
+
+Array
+(
+)
+
+reply: 
+
+
+
+
+del: 
+/var/www/front/gtjazj/log/.
+/var/www/front/gtjazj/log/..
+/var/www/front/gtjazj/log/2015-01-25 01.txt
+/var/www/front/gtjazj/log/2015-01-25 16.txt
+/var/www/front/gtjazj/log/2015-01-27 18.txt
+/var/www/front/gtjazj/log/2015-01-28 16.txt
+/var/www/front/gtjazj/log/2015-01-29 19.txt
+

@@ -1,0 +1,175 @@
+time: 2015-06-24 09:50:24
+
+request: 
+cmd=adminlogin&admin_name=222&admin_pwd=MjIyMjIy&admin_remenber=1
+Array
+(
+    [cmd] => adminlogin
+    [admin_name] => 222
+    [admin_pwd] => MjIyMjIy
+    [admin_remenber] => 1
+)
+
+reply: 
+{"errcode":"0","admin_id":"3","admin_type_id":"2","errmsg":"%E7%99%BB%E9%99%86%E6%88%90%E5%8A%9F"}
+
+
+del: 
+
+time: 2015-06-24 09:50:24
+
+request: 
+cmd=queryadmininfo&
+Array
+(
+    [cmd] => queryadmininfo
+)
+
+reply: 
+{"errcode":"0","admin_name":"222","admin_id":"3","admin_type_id":"2","check":"0"}
+
+
+del: 
+
+time: 2015-06-24 09:50:24
+
+request: 
+cmd=get_proj_id&
+Array
+(
+    [cmd] => get_proj_id
+)
+
+reply: 
+{"errcode":"0","proj_id":"","proj_name":""}
+
+
+del: 
+
+time: 2015-06-24 09:50:24
+
+request: 
+cmd=query_proj_list&admin_id=3
+Array
+(
+    [cmd] => query_proj_list
+    [admin_id] => 3
+)
+
+reply: 
+{"errcode":"0","data":[{"proj_id":"1","proj_name":"%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE"},{"proj_id":"8","proj_name":"%E9%A1%B9%E7%9B%AE%E6%B5%8B%E8%AF%953"}],"cnt":2,"proj_list":"1\/\u6d4b\u8bd5\u9879\u76ee,8\/\u9879\u76ee\u6d4b\u8bd53"}
+
+
+del: 
+
+time: 2015-06-24 09:50:28
+
+request: 
+cmd=set_proj_id&proj_id=1&proj_name=项目测试3
+Array
+(
+    [cmd] => set_proj_id
+    [proj_id] => 1
+    [proj_name] => 项目测试3
+)
+
+reply: 
+{"errcode":"0"}
+
+
+del: 
+
+time: 2015-06-24 09:50:28
+
+request: 
+cmd=query_contact&
+Array
+(
+    [cmd] => query_contact
+)
+
+reply: 
+{"errcode":"0","data":[{"contact_id":"1","contact_name":"%E6%8E%A5%E8%A7%A6%E6%88%90%E5%8A%9F"},{"contact_id":"2","contact_name":"%E9%A2%84%E7%BA%A6%E8%AE%BF%E9%97%AE"},{"contact_id":"3","contact_name":"%E5%BC%80%E5%9C%BA%E6%8B%92%E8%AE%BF"},{"contact_id":"4","contact_name":"%E4%B8%AD%E9%80%94%E6%8B%92%E8%AE%BF"},{"contact_id":"5","contact_name":"%E5%85%B6%E4%BB%96%E6%83%85%E5%86%B5"}]}
+
+
+del: 
+
+time: 2015-06-24 09:50:28
+
+request: 
+cmd=queryjrjc&admin_id=3&proj_id=1
+Array
+(
+    [cmd] => queryjrjc
+    [admin_id] => 3
+    [proj_id] => 1
+)
+
+reply: 
+{"errcode":"-1","errmsg":"%E8%AF%B7%E5%85%88%E7%AD%BE%E5%85%A5"}
+
+
+del: 
+
+time: 2015-06-24 09:50:31
+
+request: 
+cmd=queryadmininfo&
+Array
+(
+    [cmd] => queryadmininfo
+)
+
+reply: 
+{"errcode":"0","admin_name":"222","admin_id":"3","admin_type_id":"2","check":"0"}
+
+
+del: 
+
+time: 2015-06-24 09:50:31
+
+request: 
+cmd=get_proj_id&
+Array
+(
+    [cmd] => get_proj_id
+)
+
+reply: 
+{"errcode":"0","proj_id":"1","proj_name":"\u9879\u76ee\u6d4b\u8bd53"}
+
+
+del: 
+
+time: 2015-06-24 09:50:31
+
+request: 
+cmd=query_contact&
+Array
+(
+    [cmd] => query_contact
+)
+
+reply: 
+{"errcode":"0","data":[{"contact_id":"1","contact_name":"%E6%8E%A5%E8%A7%A6%E6%88%90%E5%8A%9F"},{"contact_id":"2","contact_name":"%E9%A2%84%E7%BA%A6%E8%AE%BF%E9%97%AE"},{"contact_id":"3","contact_name":"%E5%BC%80%E5%9C%BA%E6%8B%92%E8%AE%BF"},{"contact_id":"4","contact_name":"%E4%B8%AD%E9%80%94%E6%8B%92%E8%AE%BF"},{"contact_id":"5","contact_name":"%E5%85%B6%E4%BB%96%E6%83%85%E5%86%B5"}]}
+
+
+del: 
+
+time: 2015-06-24 09:50:31
+
+request: 
+cmd=queryjrjc&admin_id=3&proj_id=1
+Array
+(
+    [cmd] => queryjrjc
+    [admin_id] => 3
+    [proj_id] => 1
+)
+
+reply: 
+{"errcode":"-1","errmsg":"%E8%AF%B7%E5%85%88%E7%AD%BE%E5%85%A5"}
+
+
+del: 
+

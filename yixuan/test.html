@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+ <title>可编辑表格</title>
+ <script type="text/javascript" src="scripts/jquery.js"></script>
+ <script type="text/javascript">
+
+function filechange(){
+	alert(document.getElementById("File1").value);
+}
+function test(){
+alert($("table tr:eq(0) th:eq(0)").html());
+//var _tab = document.getElementById('testtable'); // 获取table对象
+ // var _row = _tab.rows; //获取table的行
+  //alert(_row.length); //获取第三列的值
+}
+ </script>
+</head>
+<body>
+<table id="testtable"> 
+<thead> 
+<tr> 
+<th colspan="2">鼠标点击下列内容可以进行编辑</th> 
+</tr> 
+</thead> 
+<tbody id="content"> 
+<tr> 
+<th ><image src="http://42.121.86.178:8080/download/a/3/a3p1.png" style="max-height:200px;max-width:200px;"/></th> 
+<th><object data="42.121.28.128:8080/zhengsheng/web3/zsxb.pdf" type="application/pdf" class="hiddenObjectForIE" style="align=:center;max-height:200px;max-width:200px;"></object>  </th> 
+</tr> 
+<tr> 
+<td>
+<object classid="clsid:CA8A9780-280D-11CF-A24D-444553540000" width="200" height="200" border="0">  
+<param name="_Version" value="65539">  
+<param name="_ExtentX" value="20108">  
+<param name="_ExtentY" value="10866">  
+<param name="_StockProps" value="0">  
+<param name="SRC" value="42.121.28.128:8080/zhengsheng/web3/zsxb.pdf">  
+<object data="42.121.28.128:8080/zhengsheng/web3/zsxb.pdf" type="application/pdf" style="max-height:200px;max-width:200px;" class="hiddenObjectForIE">   
+ alt : <a href="42.121.28.128:8080/zhengsheng/web3/zsxb.pdf">zsxb.pdf</a>  
+</object>  
+</object>
+</td> 
+</tr> 
+<tr> 
+<td>
+<iframe width="200px" height="200px" src = "crsc.flv"></iframe>
+</td> 
+<td>
+<object width="400" height="40"
+classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
+<param name="SRC" value="crsc.flv">
+<embed src="crsc.flv"></embed>
+</object>
+</td> 
+</tr> 
+<tr> 
+<td>
+</td> 
+<td>王五</td> 
+</tr> 
+<tr> 
+<td>000004</td> 
+<td>赵六</td> 
+</tr> 
+</tbody> 
+</table>
+<input id="testbutton" type="button" onclick="test()" />
+</body>
+</html>

@@ -1,0 +1,2158 @@
+<!DOCTYPE html>
+<html>
+ <head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="5.0.704.218"/>
+  <title>管理</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/site_global.css?26411630"/>
+  <link rel="stylesheet" type="text/css" href="css/manage.css?361367610" id="pagesheet"/>
+  <!-- Other scripts -->
+  <script type="text/javascript">
+   document.documentElement.className += ' js';
+	</script>
+    <!--custom head HTML-->
+    <script type="text/javascript" language="javascript" src="scripts/function.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/json2.js"></script>
+    <script language="javascript" type="text/javascript" src="scripts/My97DatePicker/WdatePicker.js"></script>
+<link rel="stylesheet" type="text/css" href="css/new.css"/>
+ </head>
+ <body onload="queryzsjj()">
+
+  <div class="clearfix" id="page"><!-- column -->
+   <div class="position_content" id="page_position_content">
+    <div class="browser_width colelem" id="u153"><!-- group -->
+     <div class="clearfix" id="u153_align_to_page">
+     <input id="user_id" type="text" class="clearfix grpelem" style="display:none;">
+     <input id="user_type" type="text" class="clearfix grpelem" style="display:none;">
+      <div class="clearfix grpelem" id="u1301-4"><!-- content -->
+       <p id="u1301-2">西夜后台管理</p>
+      </div>
+     </div>
+    </div>
+    <div class="clearfix colelem" id="pu902"><!-- group -->
+     <div class="grpelem" id="u902"><!-- simple frame --></div>
+     <div class="clearfix grpelem" id="u1017"><!-- group -->
+      <div class="museBGSize grpelem" id="u1027"><!-- simple frame --></div>
+     </div>
+     <div class="PamphletWidget clearfix grpelem" id="pamphletu1047"><!-- group -->
+      <div class="popup_anchor" id="u1064popup">
+       <div class="ContainerGroup clearfix" id="u1064"><!-- stack box -->
+        <div class="Container gs3 clearfix grpelem" id="u1065"><!-- column -->
+        <form action="index.php"  encType="multipart/form-data" id="zsjj_form" method="post" target="_blank">
+         <div class="clearfix colelem" id="u1293-4"><!-- content -->
+          <p id="u1293-2">西夜简介</p>
+         </div>
+         <textarea cols="90" rows="40" type="text" name="zsjj_content" id="zsjj_content"></textarea></br></br></br>        
+         <file><input type="file" id="zsjj_file" name="files[]" style="background-color:#FFFFFF"/></file>
+         <div class="rounded-corners clearfix colelem" id="u1287-4"><!-- content -->
+          <p id="u1287-2" onclick="addzsjj()"><span id="u1287">保存</span></p>
+         </div>
+         <input type="text" name="cmd" value="addzsjj" style="display:none"/>
+         </form>
+        </div>
+        <div class="Container invi grpelem" id="u1111"><!-- simple frame -->
+        <div id="zsxw">
+        	<div class="rounded-corners clearfix grpelem" id="new"><!-- content -->
+			   <p id="u1327-2"onclick="newzsxw()"><span id="u1327">新增</span></p>
+			  </div>
+			<table id="zsxwmainTable"  border = "1">   
+			   <thead>
+					<tr>
+						<th >编号</th><th >标题</th><th >新闻内容</th><th >新闻图片</th>
+					</tr>
+				</thead>
+			   <tbody id = "zsxwmain">
+			   </tbody>
+			   <tfoot></tfoot>
+			</table>   
+			<div id="zsxwmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a>| 0/0 |<a id="nextPage"  >下一页</a></p></div>
+        </div>
+        <form id="zsxwmx" style="display:none" action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+			<div class="clearfix colelem" id="pu1318"><!-- group -->
+				  <div class="clearfix grpelem" id="u1318"><!-- group -->
+				   <div class="clearfix grpelem" id="u1320-4"><!-- content -->
+					<p>编号：</p>
+				   </div>
+				  </div>
+				  <div><!-- content -->
+				   <input id="u1326-3" type="text" name="zsxw_id"  class="clearfix grpelem">
+				  </div>
+				  <div class="clearfix grpelem" id="zsxw_title_1"><!-- group -->
+				   <div class="clearfix grpelem" id="zsxw_title_2"><!-- content -->
+					<p>标题：</p>
+				   </div>
+				  </div>
+				  <div><!-- content -->
+				   <input id="zsxw_title" type="text" name="zsxw_title"  class="clearfix grpelem">
+				  </div>
+			 </div>
+			 <div class="clearfix colelem" id="pu1321"><!-- group -->
+			  <div class="clearfix grpelem" id="u1321"><!-- group -->
+			   <div class="clearfix grpelem" id="u1322-4"><!-- content -->
+				<p>内容：</p>
+			   </div>
+			  </div>
+			  <div><!-- content -->
+			   <textarea id="u1325-3" type="text" name="zsxw_content"  class="clearfix grpelem"></textarea>
+			  </div>
+			 </div>
+			 <div class="colelem" id="u1328"><!-- simple frame -->
+			 <file><input type="file" id="zsxw_file" name="files[]"  style="background-color:#FFFFFF"/></file>
+			 </div>
+			 <div class="clearfix colelem" id="pu1327-4"><!-- group -->
+				  <div class="rounded-corners clearfix grpelem" id="u1327-4"><!-- content -->
+				   <p id="u1327-2"onclick="addzsxw()"><span id="u1327">保存</span></p>
+				  </div>
+				  <div class="rounded-corners clearfix grpelem" id="u1329-4"><!-- content -->
+				   <p id="u1329-2" onclick="delzsxw()"><span id="u1329">删除</span></p>
+				  </div>
+				  <div class="rounded-corners clearfix grpelem" id="u3813-4"><!-- content -->
+				   <p id="u3813-2" onclick="queryzsxw()"><span id="u3813">返回</span></p>
+				  </div>
+			  </div>
+			  <input type="text" name="cmd" value="addzsxw" style="display:none"/>
+        </form>
+        </div>
+        <div class="Container invi grpelem" id="u1133"><!-- simple frame -->
+        <div id="zxgg">
+        	<div class="rounded-corners clearfix grpelem" id="new"><!-- content -->
+			   <p id="u1327-2"onclick="newzxgg()"><span id="u1327">新增</span></p>
+			  </div>
+			<table id="zxggmainTable"  border = "1">   
+			   <thead>
+					<tr>
+						<th >编号</th><th >标题</th><th >公告内容</th><th >公告图片</th>
+					</tr>
+				</thead>
+			   <tbody id = "zxggmain">
+			   </tbody>
+			   <tfoot></tfoot>
+			</table>   
+			<div id="zxggmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a>| 0/0 |<a id="nextPage" >下一页</a></p></div>		
+        </div>
+        <form id="zxggmx" style="display:none" action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+        	<div class="clearfix colelem" id="pu1489"><!-- group -->
+				  <div class="clearfix grpelem" id="u1489"><!-- group -->
+				   <div class="clearfix grpelem" id="u1490-4"><!-- content -->
+					<p>编号：</p>
+				   </div>
+				  </div>
+				  <div><!-- content -->
+					<input id="u1494-3" type="text" name="zxgg_id"  class="clearfix grpelem">
+				  </div>
+				  <div class="clearfix grpelem" id="zxgg_title_1"><!-- group -->
+				   <div class="clearfix grpelem" id="zxgg_title_2"><!-- content -->
+					<p>标题：</p>
+				   </div>
+				  </div>
+				  <div><!-- content -->
+				   <input id="zsxw_title" type="text" name="zxgg_title"  class="clearfix grpelem">
+				  </div>
+         </div>
+         <div class="clearfix colelem" id="pu1491"><!-- group -->
+          <div class="clearfix grpelem" id="u1491"><!-- group -->
+           <div class="clearfix grpelem" id="u1492-4"><!-- content -->
+            <p>内容：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+           <textarea id="u1493-3" type="text" name="zxgg_content"  class="clearfix grpelem"></textarea>
+          </div>
+         </div>
+         <div class="colelem" id="u1496"><!-- simple frame -->
+          <file><input type="file" id="zxgg_file" name="files[]"  style="background-color:#FFFFFF"/></file>
+         </div>
+         <div class="clearfix colelem" id="pu1495-4"><!-- group -->
+          <div class="rounded-corners clearfix grpelem" id="u1495-4"><!-- content -->
+           <p id="u1495-2"  onclick="addzxgg()"><span id="u1495">保存</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="u1497-4"><!-- content -->
+           <p id="u1497-2" onclick="delzxgg()"><span id="u1497">删除</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="zxgg_cancel"><!-- content -->
+           <p id="u1497-2" onclick="queryzxgg()"><span id="u1497">返回</span></p>
+          </div>
+         </div>  
+         	<input type="text" name="cmd" value="addzxgg" style="display:none"/>
+        </form>
+        </div>
+        <div class="Container invi grpelem" id="u1137"><!-- simple frame -->
+        <div id="sybzbh">
+        	<div class="rounded-corners clearfix grpelem" id="new"><!-- content -->
+			   <p id="u1327-2"onclick="newsybzbh()"><span id="u1327">新增</span></p>
+			  </div>
+			<table id="sybzbhmainTable"  border = "1">   
+			   <thead>
+					<tr>
+						<th >编号</th><th >类型</th><th >时间</th><th >名称</th><th >简介</th><th >边走边画</th>
+					</tr>
+				</thead>
+			   <tbody id = "sybzbhmain">
+			   </tbody>
+			   <tfoot></tfoot>
+			</table>   
+			<div id="sybzbhmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>
+         </div>
+         <form id="sybzbhmx"  style="display:none"  action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+        	 <div class="clearfix colelem" id="pu1448"><!-- group -->
+          <div class="clearfix grpelem" id="u1448"><!-- group -->
+           <div class="clearfix grpelem" id="u1449-4"><!-- content -->
+            <p>编号：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+           <input id="u1432-3" type="text" name="sybzbh_id" class="clearfix grpelem">
+          </div>
+          <div class="clearfix grpelem" id="u1439"><!-- group -->
+           <div class="clearfix grpelem" id="u1440-4"><!-- content -->
+            <p>类型：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+           <input id="u1434-3" type="text" name="sybzbh_type" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu1442"><!-- group -->
+          <div class="clearfix grpelem" id="u1442"><!-- group -->
+           <div class="clearfix grpelem" id="u1443-4"><!-- content -->
+            <p>时间：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+           <input id="u1441-3" type="text" name="sybzbh_time" class="clearfix grpelem Wdate">
+          </div>
+          <div class="clearfix grpelem" id="u1445"><!-- group -->
+           <div class="clearfix grpelem" id="u1446-4"><!-- content -->
+            <p>名称：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+           <input id="u1438-3" type="text" name="sybzbh_mc" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu1435"><!-- group -->
+          <div class="clearfix grpelem" id="u1435"><!-- group -->
+           <div class="clearfix grpelem" id="u1436-4"><!-- content -->
+            <p>简介：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+           <textarea id="u1437-3" type="text" name="sybzbh_jj" class="clearfix grpelem"></textarea>
+          </div>
+         </div>
+         <div class="colelem" id="u1433"><!-- simple frame -->
+         <file><input type="file" id="sybzbh_file" name="files[]"  style="background-color:#FFFFFF"/></file>
+         </div>
+         <div class="clearfix colelem" id="pu1444-4"><!-- group -->
+          <div class="rounded-corners clearfix grpelem" id="u1444-4"><!-- content -->
+           <p id="u1444-2" onclick="addsybzbh()"><span id="u1444">保存</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="u1447-4"><!-- content -->
+           <p id="u1447-2" onclick="delsybzbh()"><span id="u1447">删除</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="sybzbh_cancel"><!-- content -->
+           <p id="u1447-2" onclick="querysybzbh()"><span id="u1447">返回</span></p>
+          </div>
+         </div>
+         	<input type="text" name="cmd" value="addsybzbh" style="display:none"/>
+         </form>
+        </div>
+        <div class="Container invi grpelem" id="u1141"><!-- simple frame -->
+        <div id="syzsxb">
+        	<div class="rounded-corners clearfix grpelem" id="new"><!-- content -->
+			   <p id="u1327-2"onclick="newsyzsxb()"><span id="u1327">新增</span></p>
+			  </div>
+			<table id="syzsxbmainTable"  border = "1" class="syzsxbmainTable">   
+			   <thead>
+					<tr>
+						<th class="syzsxb_id">编号</th><th class="syzsxb_mc">小报名称</th><th >小报图片</th><th >小报内容</th>
+					</tr>
+				</thead>
+			   <tbody id = "syzsxbmain">
+			   </tbody>
+			   <tfoot></tfoot>
+			</table>   
+			<div id="syzsxbmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>
+        </div>
+        <form id="syzsxbmx"  style="display:none"  action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+        	<div class="clearfix colelem" id="pu1690"><!-- group -->
+          <div class="clearfix grpelem" id="u1690"><!-- group -->
+           <div class="clearfix grpelem" id="u1691-4"><!-- content -->
+            <p>编号：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+            <input id="u1692-3" type="text" name="syzsxb_id" class="clearfix grpelem">
+          </div>
+          <div class="clearfix grpelem" id="u1693"><!-- group -->
+           <div class="clearfix grpelem" id="u1694-4"><!-- content -->
+            <p>名称：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+            <input id="u1695-3" type="text" name="syzsxb_mc" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu1697"><!-- group -->
+          <div class="clearfix grpelem" id="u1697"><!-- group -->
+           <div class="clearfix grpelem" id="u1698-4"><!-- content -->
+            <p>图片：</p>
+           </div>
+          </div>
+          <div class="grpelem" id="u1696" style="margin-top:15px"><!-- simple frame -->
+          <file><input type="file" id="syzsxb_pic" name="syzsxb_pic[]"  style="background-color:#FFFFFF"/></file>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu1699-4"><!-- group -->
+          <div class="clearfix grpelem" id="u1699-4"><!-- content -->
+           <p>内容：</p>
+          </div>
+          <div class="grpelem" id="u1700" style="margin-top:15px"><!-- simple frame -->
+          <file><input type="file" id="syzsxb_file" name="syzsxb_file[]"  style="background-color:#FFFFFF"/></file>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu1701-4"><!-- group -->
+          <div class="rounded-corners clearfix grpelem" id="u1701-4"><!-- content -->
+           <p id="u1701-2" onclick="addsyzsxb()"><span id="u1701">保存</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="u1702-4"><!-- content -->
+           <p id="u1702-2" onclick="delsyzsxb()"><span id="u1702">删除</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="syzsxb_cancel"><!-- content -->
+           <p id="u1702-2" onclick="querysyzsxb()"><span id="u1702">返回</span></p>
+          </div>
+         </div>
+         	<input type="text" name="cmd" value="addsyzsxb" style="display:none"/>
+        </form>
+        </div>
+        <div class="Container invi grpelem" id="u1144"><!-- simple frame -->
+        <div id="yxzp">
+        	<div class="rounded-corners clearfix grpelem" id="new"><!-- content -->
+			   <p id="u1327-2"onclick="newyxzp()"><span id="u1327">新增</span></p>
+			  </div>
+			<table id="yxzpmainTable"  border = "1">   
+			   <thead>
+					<tr>
+						<th >编号</th><th >类型</th><th >时间</th><th >名称</th><th >简介</th><th >优秀作品</th>
+					</tr>
+				</thead>
+			   <tbody id = "yxzpmain">
+			   </tbody>
+			   <tfoot></tfoot>
+			</table>   
+			<div id="yxzpmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>
+        </div>
+        <form id="yxzpmx"  style="display:none" action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+        	<div class="clearfix colelem" id="pu1784"><!-- group -->
+          <div class="clearfix grpelem" id="u1784"><!-- group -->
+           <div class="clearfix grpelem" id="u1785-4"><!-- content -->
+            <p>编号：</p>
+           </div>
+          </div>
+          <div ><!-- content -->
+           <input id="u1786-3" type="text" name="yxzp_id" class="clearfix grpelem">
+          </div>
+          <div class="clearfix grpelem" id="u1787"><!-- group -->
+           <div class="clearfix grpelem" id="u1788-4"><!-- content -->
+            <p>类型：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+           <input id="u1789-3" type="text" name="yxzp_type" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu1790"><!-- group -->
+          <div class="clearfix grpelem" id="u1790"><!-- group -->
+           <div class="clearfix grpelem" id="u1791-4"><!-- content -->
+            <p>时间：</p>
+           </div>
+          </div>
+          <div ><!-- content -->
+           <input id="u1792-3" type="text" name="yxzp_time" class="clearfix grpelem Wdate">
+          </div>
+          <div class="clearfix grpelem" id="u1793"><!-- group -->
+           <div class="clearfix grpelem" id="u1794-4"><!-- content -->
+            <p>名称：</p>
+           </div>
+          </div>
+          <div ><!-- content -->
+           <input id="u1795-3" type="text" name="yxzp_mc" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu1796"><!-- group -->
+          <div class="clearfix grpelem" id="u1796"><!-- group -->
+           <div class="clearfix grpelem" id="u1797-4"><!-- content -->
+            <p>简介：</p>
+           </div>
+          </div>
+          <div ><!-- content -->
+           <textarea id="u1798-3" type="text" name="yxzp_jj" class="clearfix grpelem"></textarea>
+          </div>
+         </div>
+         <div class="colelem" id="u1800"><!-- simple frame -->
+         <file><input type="file" id="yxzp_file" name="files[]"  style="background-color:#FFFFFF"/></file>
+         </div>
+         <div class="clearfix colelem" id="pu1799-4"><!-- group -->
+          <div class="rounded-corners clearfix grpelem" id="u1799-4"><!-- content -->
+           <p id="u1799-2" onclick="addyxzp()"><span id="u1799">保存</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="u1801-4"><!-- content -->
+           <p id="u1801-2" onclick="delyxzp()"><span id="u1801">删除</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="yxzp_cancel"><!-- content -->
+           <p id="u1801-2" onclick="queryyxzp()"><span id="u1801">返回</span></p>
+          </div>
+         </div>
+         	<input type="text" name="cmd" value="addyxzp" style="display:none"/>
+        </form>
+        </div>
+        <div class="Container invi grpelem" id="u1146"><!-- simple frame -->
+        <div id="bmlc">
+        	<div class="rounded-corners clearfix grpelem" id="new"><!-- content -->
+			   <p id="u1327-2"onclick="newbmlc()"><span id="u1327">新增</span></p>
+			  </div>
+			<table id="bmlcmainTable"  border = "1">   
+			   <thead>
+					<tr>
+						<th >简介</th><th >流程内容</th>
+					</tr>
+				</thead>
+			   <tbody id = "bmlcmain">
+			   </tbody>
+			   <tfoot></tfoot>
+			</table>   
+			<div id="bmlcmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>
+        </div>
+        <form id="bmlcmx"  style="display:none"  action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+        	<div class="clearfix colelem" id="pu1889"><!-- group -->
+          <div class="clearfix grpelem" id="u1889"><!-- group -->
+           <div class="clearfix grpelem" id="u1890-4"><!-- content -->
+            <p>简介：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+           <textarea id="u1891-3" type="text" name="bmlc_content"  class="clearfix grpelem"></textarea>
+          </div>
+         </div>
+         <div class="colelem" id="u1893"><!-- simple frame -->
+         <file><input type="file" id="bmlc_file" name="files[]"  style="background-color:#FFFFFF"/></file>
+         </div>
+         <div class="clearfix colelem" id="pu1892-4"><!-- group -->
+          <div class="rounded-corners clearfix grpelem" id="u1892-4"><!-- content -->
+           <p id="u1892-2" onclick="addbmlc()"><span id="u1892">保存</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="u1894-4"><!-- content -->
+           <p id="u1894-2" onclick="querybmlc()"><span id="u1894">返回</span></p>
+          </div>
+         </div>
+         <input type="text" name="cmd" value="addbmlc" style="display:none"/>
+        </form>
+        </div>
+        <div class="Container invi clearfix grpelem" id="u1148"><!-- group -->       
+        <div id="kcgl">
+         <div class="clearfix colelem" id="pu1824-4"><!-- group -->
+          <div class="clearfix grpelem" id="u1824-4"><!-- content -->
+           <p id="u1824-2"><span id="u1824">课程管理</span></p>
+          </div>
+          <div class="museBGSize clearfix grpelem" id="u1823-4"><!-- content -->
+           <p id="u1823-2" onclick="newkc()">新增课程</p>
+          </div>
+         </div>
+         <div class="colelem" id="u1977"><!-- simple frame -->
+         <table id="kcglmainTable"  border = "1">   
+		   <thead>
+				<tr>
+					<th >编号</th><th >名称</th><th >类型</th><th >编辑</th>
+				</tr>
+			</thead>
+		   <tbody id = "kcglmain">
+		   </tbody>
+		   <tfoot></tfoot>
+	 	</table>   
+    	<div id="kcglmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>    
+        </div>
+        </div>
+        <form id="kcglmx" style="display:none"  action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+        	<div class="clearfix colelem" id="pu2317-4"><!-- group -->
+          <div class="clearfix grpelem" id="u2317-4"><!-- content -->
+           <p>编号：</p>
+          </div>
+          <div><!-- content -->
+        	<input id="u2318-3" type="text" name="kc_id" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu2322"><!-- group -->
+          <div class="clearfix grpelem" id="u2322"><!-- group -->
+           <div class="clearfix grpelem" id="u2323-4"><!-- content -->
+            <p>名称：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+           <input id="u2324-3" type="text" name="kc_name" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu2329-4"><!-- group -->
+          <div class="clearfix grpelem" id="u2329-4"><!-- content -->
+           <p>介绍：</p>
+          </div>
+          <div><!-- content -->
+            <textarea id="u2330-3" type="text" name="kc_js" class="clearfix grpelem"></textarea>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu2325-4"><!-- group -->
+          <div class="rounded-corners clearfix grpelem" id="u2325-4"><!-- content -->
+           <p id="u2325-2" onclick="addkc()"><span id="u2325">保存</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="u2326-4"><!-- content -->
+           <p id="u2326-2" onclick="delkc()"><span id="u2326">删除</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="kcgl_cancel"><!-- content -->
+           <p id="u2326-2" onclick="querykc()"><span id="u2326">返回</span></p>
+          </div>
+         </div>
+         <input type="text" name="cmd" value="addkc" style="display:none"/>
+        </form>
+        <div id="kjgl"  style="display:none">
+        	<div class="clearfix colelem" id="pu2331-4"><!-- group -->
+          <div class="clearfix grpelem" id="u2331-4"><!-- content -->
+           <p id="u2331-2">课件管理</p>
+          </div>
+          <div class="museBGSize clearfix grpelem" id="u2332-4"  onclick="newkj()"><!-- content -->
+           <p id="u2332-2">上传课件</p>
+          </div>
+         </div>
+         <div class="colelem" id="u2333"><!-- simple frame -->
+         	<input id="kjgl_kc_id" type="text"  class="clearfix grpelem" style="display: none;">
+         	<table id="kjglmainTable"  border = "1">   
+			   <thead>
+					<tr>
+						<th >编号</th><th >名称</th><th>所属课程位置</th><th >课件地址</th><th >周刊</th>
+					</tr>
+				</thead>
+			   <tbody id = "kjglmain">
+			   </tbody>
+			   <tfoot></tfoot>
+			</table>   
+			<div id="kjglmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>    
+			<div class="rounded-corners clearfix grpelem" id="u2326-4"><!-- content -->
+           		<p id="u2326-2" onclick="querykc()"><span id="u2326">返回</span></p>
+          	</div>
+		</div>
+        	
+        </div>
+        <form id="kjglmx" style="display:none"  action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+        	<input id="kjglmx_kc_id" name="kc_id" type="text"  class="clearfix grpelem" style="display: none;">
+        	<div class="clearfix colelem" id="pu2334-4"><!-- group -->
+          <div class="clearfix grpelem" id="u2334-4"><!-- content -->
+           <p>编号：</p>
+          </div>
+          <div><!-- content -->
+           <input id="u2335-3" type="text" name="kj_id" class="clearfix grpelem">
+          </div>
+          <div class="clearfix grpelem" id="u2336"><!-- group -->
+           <div class="clearfix grpelem" id="u2337-4"><!-- content -->
+            <p>名称：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+           <input id="u2338-3" type="text" name="kj_name" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu2339"><!-- group -->
+          <div class="clearfix grpelem" id="u2339"><!-- group -->
+           <div class="clearfix grpelem" id="u2340-4"><!-- content -->
+            <p>所属课程位置：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+           <input id="u2341-3" type="text" name="zs_id" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu2345" style="display:none"><!-- group -->
+          <div class="clearfix grpelem" id="u2345"><!-- group -->
+           <div class="clearfix grpelem" id="u2346-4"><!-- content -->
+            <p>介绍：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+           <textarea id="u2347-3" type="text" name="kj_js" class="clearfix grpelem"></textarea>
+          </div>
+         </div>
+         <div class="colelem" id="u2349"><!-- simple frame -->
+         <file>课件：<input type="file" id="kj_file" name="kj_file[]"  style="background-color:#FFFFFF"/></file></br>
+         <file>周刊：<input type="file" id="zk_file" name="zk_file[]"  style="background-color:#FFFFFF"/></file>
+         </div>
+         <div class="clearfix colelem" id="pu2348-4"><!-- group -->
+          <div class="rounded-corners clearfix grpelem" id="u2348-4"><!-- content -->
+           <p id="u2348-2" onclick="addkj()"><span id="u2348">保存</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="u2350-4"><!-- content -->
+           <p id="u2350-2" onclick="delkj()"><span id="u2350">删除</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="kjgl_cancel"><!-- content -->
+           <p id="u2350-2" onclick="querykj($('#kjgl_kc_id').val())"><span id="u2350">返回</span></p>
+          </div>
+         </div>    
+         	<input type="text" name="cmd" value="addkj" style="display:none"/>  	
+        </form>      
+        </div>
+        <div class="Container invi grpelem" id="u1150"><!-- simple frame -->
+        <div id="zpdp" style="margin-top:20px;">
+        <div class="clearfix colelem" id="pu2509-4"><!-- group -->
+          <div class="clearfix grpelem" id="u2509-4"><!-- content -->
+           <p>教师编号：</p>
+          </div>
+          <div><!-- content -->
+           <input id="u2510-3" type="text"  class="clearfix grpelem">
+          </div>
+          <div class="clearfix grpelem" id="u2511-4"><!-- content -->
+           <p>学生学号：</p>
+          </div>
+          <div><!-- content -->
+           <input id="u2512-3" type="text"  class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu2513-4"><!-- group -->
+          <div class="clearfix grpelem" id="u2513-4"><!-- content -->
+           <p>点评类型：</p>
+          </div>
+          <div><!-- content -->
+           <select  class="clearfix grpelem" id="u2514-3">
+           	<option value="2">全部</option>
+			  <option value="1">已点评</option>
+			  <option value="0">未点评</option>			  
+			</select>
+          </div>
+          <div class="clearfix grpelem" id="u2515-4"><!-- content -->
+           <p>查询类型：</p>
+          </div>
+          <div><!-- content -->
+           <select  class="clearfix grpelem" id="u2516-3">
+           		<option value="0">汇总</option>
+			  	<option value="1">分类</option>		  
+			</select>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu2510-4"><!-- group -->
+          <div class="clearfix grpelem" id="u2510-4"><!-- content -->
+           <p>起始日期：</p>
+          </div>
+          <div><!-- content -->
+           <input id="u2510-5" type="text"  class="clearfix grpelem Wdate">
+          </div>
+          <div class="clearfix grpelem" id="u2512-4"><!-- content -->
+           <p>结束日期：</p>
+          </div>
+          <div><!-- content -->
+           <input id="u2512-5" type="text"  class="clearfix grpelem Wdate">
+          </div>
+         </div>
+                <div class="clearfix colelem" id="pu2510-5"><!-- group -->
+                      <div class="clearfix grpelem" id="u2510-6"><!-- content -->
+                    <p>班级：</p>
+                  </div>
+                      <div><!-- content -->
+                    <select id="u2510-7" type="text"  class="clearfix grpelem">
+                    </select>
+                  </div>
+                    </div>
+         <div class="rounded-corners clearfix colelem" id="u2517-4"><!-- content -->
+          <p id="u2517-2" onclick="queryzpdp()"><span id="u2517">查询</span></p>
+         </div>
+         <div class="colelem" id="u2520" style="display:none"><!-- simple frame -->
+         <table id="zpdpmainTable"  border = "1">   
+			   <thead id = "zpdpth">
+				</thead>
+			   <tbody id = "zpdpmain">
+			   </tbody>
+			   <tfoot></tfoot>
+			</table>   
+			<div id="zpdpmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>    
+			
+         </div>
+         </div>
+         <form id="zpdpmx" style="display:none;"  action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+         	<input id="zpdp_kj_id" type="text"  class="clearfix grpelem" style="display:none;">
+         	<div class="clearfix colelem" id="pu2534-4"><!-- group -->
+			  <div class="clearfix grpelem" id="u2534-4"><!-- content -->
+			   <p>学号：</p>
+			  </div>
+			  <div><!-- content -->
+			   <input id="u2535-3" type="text"  class="clearfix grpelem">
+			  </div>
+			  <div class="clearfix grpelem" id="u2536-4"><!-- content -->
+			   <p>姓名：</p>
+			  </div>
+			  <div><!-- content -->
+				<input id="u2537-3" type="text"  class="clearfix grpelem">
+			  </div>
+			 </div>
+			 <div class="clearfix colelem" id="pu2538-4"><!-- group -->
+			  <div class="clearfix grpelem" id="u2538-4"><!-- content -->
+			   <p>生日：</p>
+			  </div>
+			  <div><!-- content -->
+			   <input id="u2539-3" type="text"  class="clearfix grpelem Wdate">
+			  </div>
+			  <div class="clearfix grpelem" id="u2540-4"><!-- content -->
+			   <p>地址：</p>
+			  </div>
+			  <div><!-- content -->
+			   <input id="u2541-3" type="text"  class="clearfix grpelem">
+			  </div>
+			 </div>
+			 <div class="clearfix colelem" id="pu2542-4"><!-- group -->
+			  <div class="clearfix grpelem" id="u2542-4"><!-- content -->
+			   <p>点评教师：</p>
+			  </div>
+			  <div><!-- content -->
+			   <input id="u2543-3" type="text"  class="clearfix grpelem">
+			  </div>
+			  <div class="clearfix grpelem" id="u2544-4"><!-- content -->
+			   <p>课件：</p>
+			  </div>
+			  <div><!-- content -->
+			   <input id="u2545-3" type="text"  class="clearfix grpelem">
+			  </div>
+         	</div>
+            <div class="clearfix colelem" id="pu2542-6"><!-- group -->
+			  <div class="clearfix grpelem" id="u2542-6"><!-- content -->
+			   <p>点评时间：</p>
+			  </div>
+			  <div><!-- content -->
+			   <input id="u2543-6" type="text"  class="clearfix grpelem">
+			  </div>
+         	</div>
+         <div class="colelem" id="u2546"><!-- simple frame -->
+         	<table id="zpdpmxmainTable"  border = "1">   
+			   <thead>
+				</thead>
+			   <tbody id = "zpdpmxmain">
+			   </tbody>
+			   <tfoot></tfoot>
+			</table>   
+			<div id="zpdpmxmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>    
+			<div class="clearfix colelem" id="pu2547-4"><!-- group -->
+			  <div class="rounded-corners clearfix grpelem" id="u2547-4"><!-- content -->
+			   <p id="u2547-2" onclick="addzpdp()"><span id="u2547">点评</span></p>
+			  </div>
+			  <div class="rounded-corners clearfix grpelem" id="u2548-4"><!-- content -->
+			   <p id="u2548-2" onclick="zpdpgoback()"><span id="u2548">返回</span></p>
+			  </div>
+			 </div>
+         </div>
+         </form>
+        </div>
+        <div class="Container invi grpelem" id="u1152"><!-- simple frame -->
+        <div id="zsxb">
+        	<div class="clearfix colelem" id="pu3008-4"><!-- group -->
+          <div class="clearfix grpelem" id="u3008-4"><!-- content -->
+           <p id="u3008-2">西夜小报</p>
+          </div>
+          <div class="museBGSize clearfix grpelem" id="u3009-4" onclick="newzsxb()"><!-- content -->
+           <p id="u3009-2">上传小报</p>
+          </div>
+         </div>
+         <div class="colelem" id="u3010"><!-- simple frame -->
+         	<table id="zsxbmainTable"  border = "1">   
+			   <thead>
+			   		<tr><th>名称</th><th>时间</th></tr>
+				</thead>
+			   <tbody id = "zsxbmain">
+			   </tbody>
+			   <tfoot></tfoot>
+			</table>   
+			<div id="zsxbmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>    
+         </div>
+        </div>
+        <form id="zsxbmx" style="margin-top:50px"  style="display:none"  action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+        	<div class="clearfix colelem" id="pu3087-4"><!-- group -->
+          <div class="clearfix grpelem" id="u3087-4"><!-- content -->
+           <p>名称：</p>
+          </div>
+          <div><!-- content -->
+           <input id="u3088-3" type="text" name="zsxb_mc" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3089-4"><!-- group -->
+          <div class="clearfix grpelem" id="u3089-4"><!-- content -->
+           <p>时间：</p>
+          </div>
+          <div><!-- content -->
+           <input id="u3090-3" type="text" name="zsxb_date" class="clearfix grpelem Wdate">
+          </div>
+         </div>
+         <div class="colelem" id="u3091"><!-- simple frame -->
+         	<table id="zsxbmxmainTable"  border = "1">   
+				   <thead>
+				   		<tr><th>小报</th><th>封面</th><th>删除</th></tr>
+					</thead>
+				   <tbody id = "zsxbmxmain">
+				   </tbody>
+				   <tfoot></tfoot>
+				</table>   
+				<div id="zsxbmxmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div> 
+						<div class="clearfix colelem" id="pu3092-4"><!-- group -->
+				  <div class="rounded-corners clearfix grpelem" id="u3092-4"><!-- content -->
+				   <p id="u3092-2" onclick="addzsxb()"><span id="u3092">保存</span></p>
+				  </div>
+				  <div class="rounded-corners clearfix grpelem" id="u3093-4"><!-- content -->
+				   <p id="u3093-2" onclick="queryzsxb()"><span id="u3093">返回</span></p>
+				  </div>
+			</div>
+         </div>
+         <input type="text" name="cmd" value="addzsxb_web" style="display:none"/>
+        </form>
+        </div>
+        <div class="Container invi grpelem" id="u1154"><!-- simple frame -->
+        <div id="xygl" style="margin-top:20px;">
+        	<div class="clearfix colelem" id="pu3177-4"><!-- group -->
+          <div class="clearfix grpelem" id="u3177-4"><!-- content -->
+           <p>学号：</p>
+          </div>
+          <div><!-- content -->
+           <input id="u3178-3" type="text"  class="clearfix grpelem">
+          </div>
+          <div class="clearfix grpelem" id="u3179-4"><!-- content -->
+           <p>是否审核：</p>
+          </div>
+          <div><!-- content -->
+           <select  class="clearfix grpelem" id="u3180-3">
+           	  <option value="2">全部</option>
+			  <option value="1">已审核</option>
+			  <option value="0">未审核</option>			  
+			</select>
+          </div>
+         </div>
+                  <div class="clearfix colelem" id="pu3177-5"><!-- group -->
+                      <div class="clearfix grpelem" id="u3177-5"><!-- content -->
+                    <p>班级：</p>
+                  </div>
+                      <div><!-- content -->
+                    <select id="u3178-5" type="text"  class="clearfix grpelem">
+                    </select>
+                  </div>
+                    </div>
+         <div class="clearfix colelem" id="pu3181-4"><!-- group -->
+          <div class="rounded-corners clearfix grpelem" id="u3181-4"><!-- content -->
+           <p id="u3181-2" onclick="queryxygl()"><span id="u3181">查询</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="u3182-4"><!-- content -->
+           <p id="u3182-2" onclick="newxygl()"><span id="u3182">新增</span></p>
+          </div>
+         </div>
+         <div class="colelem" id="u3183" style="display:none"><!-- simple frame -->
+         	<table id="xyglmainTable"  border = "1">   
+			   <thead>
+			   		<tr><th>学号</th><th>姓名</th><th>生日</th><th>性别</th><th>地址</th><th>课程</th><th>作品数</th><th>图片数</th><th>已学课程</th><th>剩余课程</th><th>当前课程</th><th>编辑</th></tr>
+				</thead>
+			   <tbody id = "xyglmain">
+			   </tbody>
+			   <tfoot></tfoot>
+			</table>   
+			<div id="xyglmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>    
+         </div>
+        </div>
+        <form id="xyglmx" style="display:none;" action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+        	<input id="student_id" type="text" name="student_id" class="clearfix grpelem" style="display:none;">
+        	<div class="clearfix colelem" id="u3250-4"><!-- content -->
+          <p id="u3250-2">添加学员</p>
+         </div>
+         <div class="clearfix colelem" id="pu3248-4"><!-- group -->
+          <div class="clearfix grpelem" id="u3248-4"><!-- content -->
+           <p>学号</p>
+          </div>
+          <div class="clearfix grpelem" id="u3251-4"><!-- content -->
+           <p>密码</p>
+          </div>
+          <div class="clearfix grpelem" id="u3253-4"><!-- content -->
+           <p>确认密码</p>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3249-3"><!-- group -->
+          <div><!-- content -->
+           <input id="u3249-3" type="text" name="username" class="clearfix grpelem">
+          </div>
+          <div><!-- content -->
+           <input id="u3252-3" type="password" name="userpwd" class="clearfix grpelem">
+          </div>
+          <div><!-- content -->
+           <input id="u3254-3" type="password" name="userpwdconfirm" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3326-4"><!-- group -->
+          <div class="clearfix grpelem" id="u3326-4"><!-- content -->
+           <p>选择课程</p>
+          </div>
+          <div class="clearfix grpelem" id="u3327-4"><!-- content -->
+           <p>选择课件</p>
+          </div>
+          <div class="clearfix grpelem" id="u3328-4"><!-- content -->
+           <p>入学时间</p>
+          </div>
+          <div class="clearfix grpelem" id="u3329-4"><!-- content -->
+           <p>用户状态</p>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3327-3"><!-- group -->
+          <div><!-- content -->
+           <select  class="clearfix grpelem" name="kc_id" id="u3327-3" onchange="queryzs()">			  
+			</select>
+          </div>
+          <div><!-- content -->
+           <select  class="clearfix grpelem" name="qs_zs_id" id="u3328-3">			  
+			</select>
+          </div>
+          <div><!-- content -->
+           <input id="u3329-3" type="text"  name="rx_time" class="clearfix grpelem Wdate">
+          </div>
+          <div><!-- content -->
+           <select  class="clearfix grpelem" name="ifsd" id="ifsd">	
+           		<option value="0">普通</option>
+			 	<option value="1">锁定</option>
+			  	<option value="2">解锁</option>
+			  	<option value="3">全部可看</option>		  
+			</select>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3283-4"><!-- group -->
+          <div class="clearfix grpelem" id="u3283-4"><!-- content -->
+           <p>学员姓名</p>
+          </div>
+          <div class="clearfix grpelem" id="u3255-4"><!-- content -->
+           <p>性别</p>
+          </div>
+          <div class="clearfix grpelem" id="u3282-4"><!-- content -->
+           <p>昵称</p>
+          </div>
+          <div class="clearfix grpelem" id="u3282-5"><!-- content -->
+           <p>教师</p>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3284-3"><!-- group -->
+          <div><!-- content -->
+           <input id="u3284-3" type="text" name="student_name" class="clearfix grpelem">
+          </div>
+          <div><!-- content -->
+           <select  class="clearfix grpelem" name="student_sex" id="u3256-3">
+           	  <option value="男">男</option>
+			  <option value="女">女</option>		  
+			</select>
+          </div>
+          <div><!-- content -->
+           <input id="u3281-3" type="text" name="student_nickname" class="clearfix grpelem">
+          </div>
+           <div><!-- content -->
+           <select  class="clearfix grpelem" name="admin_id" id="u3256-5">	  
+			</select>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3257-4"><!-- group -->
+          <div class="clearfix grpelem" id="u3257-4"><!-- content -->
+           <p>地址</p>
+          </div>
+          <div class="clearfix grpelem" id="u3269-4"><!-- content -->
+           <p>正在参加何种培训班？</p>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3258-3"><!-- group -->
+          <div><!-- content -->
+           <input id="u3258-3" type="text" name="student_address" class="clearfix grpelem">
+          </div>
+          <div><!-- content -->
+           <input id="u3270-3" type="text" name="student_xgpxb" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3259-4"><!-- group -->
+          <div class="clearfix grpelem" id="u3259-4"><!-- content -->
+           <p>出生日期</p>
+          </div>
+          <div class="clearfix grpelem" id="u3271-4"><!-- content -->
+           <p>曾在何机构学习过美术？</p>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3260-3"><!-- group -->
+          <div><!-- content -->
+           <input id="u3260-3" type="text"  name="student_birthday" class="clearfix grpelem Wdate">
+          </div>
+          <div><!-- content -->
+           <input id="u3272-3" type="text" name="student_xgjg" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3261-4"><!-- group -->
+          <div class="clearfix grpelem" id="u3261-4"><!-- content -->
+           <p>联系人</p>
+          </div>
+          <div class="clearfix grpelem" id="u3263-4"><!-- content -->
+           <p>手机</p>
+          </div>
+          <div class="clearfix grpelem" id="u3273-4"><!-- content -->
+           <p>有什么其他的兴趣爱好？</p>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3262-3"><!-- group -->
+          <div><!-- content -->
+           <input id="u3262-3" type="text" name="student_parent" class="clearfix grpelem">
+          </div>
+          <div><!-- content -->
+           <input id="u3264-3" type="number" name="student_phone" class="clearfix grpelem">
+          </div>
+          <div><!-- content -->
+           <input id="u3274-3" type="text" name="student_xqah" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3265-4"><!-- group -->
+          <div class="clearfix grpelem" id="u3265-4"><!-- content -->
+           <p>微博</p>
+          </div>
+          <div class="clearfix grpelem" id="u3267-4"><!-- content -->
+           <p>qq号码</p>
+          </div>
+          <div class="clearfix grpelem" id="u3275-4"><!-- content -->
+           <p><span id="u3275">是否有家人从事美术、设计等相关行业？</span></p>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3266-3"><!-- group -->
+          <div><!-- content -->
+           <input id="u3266-3" type="text" name="student_weibo" class="clearfix grpelem">
+          </div>
+          <div><!-- content -->
+           <input id="u3268-3" type="number" name="student_qq" class="clearfix grpelem">
+          </div>
+          <div><!-- content -->
+           <input id="u3276-3" type="text" name="student_jrxgzy" class="clearfix grpelem">
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3285-4"><!-- group -->
+          <div class="clearfix grpelem" id="u3285-4"><!-- content -->
+           <p>常用邮箱</p>
+          </div>
+          <div class="clearfix grpelem" id="u3277-4"><!-- content -->
+           <p>希望孩子学习美术的初衷是什么？</p>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu3286-3"><!-- group -->
+          <div><!-- content -->
+           <input id="u3286-3" type="email" name="student_email" class="clearfix grpelem">
+          </div>
+          <div><!-- content -->
+           <input id="u3278-3" type="text" name="student_cz" class="clearfix grpelem">
+          </div>
+         </div>
+                <div class="clearfix colelem" id="pu3285-5">
+                    <div class="clearfix grpelem" id="u3279-5"><!-- content -->
+                    <p>班级</p>
+                  </div>
+               	 <div class="clearfix colelem" id="u3279-4"><!-- content -->
+                      <p>从何种渠道了解西夜的？</p>
+                    </div>
+                  </div>
+                 <div class="clearfix colelem" id="pu3286-5"><!-- group -->
+                    <div><!-- content -->
+                    <select id="u3280-5" type="text" name="bj_id" class="clearfix grpelem">
+                    </select>
+                  </div>
+                <div><!-- content -->
+                      <input id="u3280-3" type="text" name="student_qd" class="clearfix grpelem">
+                    </div>
+         </div>
+         <div class="clearfix colelem" id="pu3330-4"><!-- group -->
+          <div class="rounded-corners clearfix grpelem" id="u3330-4"><!-- content -->
+           <p id="u3330-2" onclick="addxygl()"><span id="u3330">保存</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="u3331-4"><!-- content -->
+           <p id="u3331-2" onclick="delxygl()"><span id="u3331">删除</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="u3334-4"><!-- content -->
+           <p id="u3334-2" onclick="queryxygl()"><span id="u3334">返回</span></p>
+          </div>
+         </div>
+         	<input type="text" name="cmd" value="addxygl" style="display:none"/>
+        </form>
+        </div>
+        <div class="Container invi grpelem" id="u1156"><!-- simple frame -->
+        <div id="bzbh">
+        	<div class="clearfix colelem" id="pu3341-4"><!-- group -->
+			  <div class="clearfix grpelem" id="u3341-4"><!-- content -->
+			   <p id="u3341-2">边走边画</p>
+			  </div>
+			  <div class="museBGSize clearfix grpelem" id="u3342-4" style="display:none"><!-- content -->
+			   <p id="u3342-2">新增</p>
+			  </div>
+			 </div>
+             <div class="clearfix colelem" id="pu3344-4"><!-- group -->
+              <div class="clearfix grpelem" id="u3344-4"><!-- content -->
+               <p>学生学号：</p>
+              </div>
+              <div><!-- content -->
+               <input id="u3344-5" type="text"  class="clearfix grpelem">
+              </div>
+             </div>
+             <div class="clearfix colelem" id="pu3430-4"><!-- group -->
+              <div class="clearfix grpelem" id="u3430-4"><!-- content -->
+               <p>起始日期：</p>
+              </div>
+              <div><!-- content -->
+               <input id="u3430-5" type="text"  class="clearfix grpelem Wdate">
+              </div>
+              <div class="clearfix grpelem" id="u3431-4"><!-- content -->
+               <p>结束日期：</p>
+              </div>
+              <div><!-- content -->
+               <input id="u3431-5" type="text"  class="clearfix grpelem Wdate">
+              </div>
+             </div>
+             <div class="rounded-corners clearfix colelem" id="u3434-4"><!-- content -->
+              <p id="u3434-2" onclick="querybzbh()"><span id="u3434">查询</span></p>
+             </div>
+         	<div class="colelem" id="u3343"  style="display:none"><!-- simple frame -->
+         		<table id="bzbhmainTable"  border = "1">   
+				   <thead>
+				   		<tr><th>学号</th><th>姓名</th><th>边走边画</th><th>时间</th><th>简介</th></tr>
+					</thead>
+				   <tbody id = "bzbhmain">
+				   </tbody>
+				   <tfoot></tfoot>
+				</table>   
+				<div id="bzbhmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>    	 
+         	</div>
+        </div>
+        <form id="bzbhmx" style="display:none;"  action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+        	<div class="clearfix colelem" id="u3420-4"><!-- content -->
+			  <p id="u3420-2">边走边画</p>
+			 </div>
+			 <div class="clearfix colelem" id="pu3421-4"><!-- group -->
+			  <div class="clearfix grpelem" id="u3421-4"><!-- content -->
+			   <p>学号：</p>
+			  </div>
+			  <div><!-- content -->
+			   <input id="u3422-3" type="text" name="username" class="clearfix grpelem">
+			  </div>
+			  <div class="clearfix grpelem" id="u3423-4"><!-- content -->
+			   <p>姓名：</p>
+			  </div>
+			  <div><!-- content -->
+			   <input id="u3424-3" type="text" name="student_name" class="clearfix grpelem">
+			  </div>
+			 </div>
+			 <div class="clearfix colelem" id="pu3425-4"><!-- group -->
+			  <div class="clearfix grpelem" id="u3425-4"><!-- content -->
+			   <p>作业名称：</p>
+			  </div>
+			  <div><!-- content -->
+			   <input id="u3426-3" type="text" name="bzbh_mc" class="clearfix grpelem">
+			  </div>
+			  <div class="clearfix grpelem" id="u3427-4"><!-- content -->
+			   <p>时间：</p>
+			  </div>
+			  <div><!-- content -->
+			   <input id="u3428-3" type="text" name="bzbh_time" class="clearfix grpelem Wdate">
+			  </div>
+			 </div>
+			 <div class="clearfix colelem" id="pu3429-4"><!-- group -->
+			  <div class="clearfix grpelem" id="u3429-4"><!-- content -->
+			   <p>作业简介：</p>
+			  </div>
+			  <div><!-- content -->
+			   <input id="u3430-3" type="text" name="bzbh_jj" class="clearfix grpelem">
+			  </div>
+			 </div>
+			 <div class="colelem" id="u3431"><!-- simple frame -->
+			 	<table id="bzbhmxmainTable"  border = "1">   
+				   <thead>
+				   		<tr><th>边走边画</th><th>边走边画上传</th><th>删除</th></tr>
+					</thead>
+				   <tbody id = "bzbhmxmain">
+				   </tbody>
+				   <tfoot></tfoot>
+				</table>   
+				<div id="bzbhmxmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div> 
+			 	<div class="clearfix colelem" id="pu3432-4"><!-- group -->
+				  <div class="rounded-corners clearfix grpelem" id="u3432-4"><!-- content -->
+				   <p id="u3432-2"><span id="u3432" onclick="addbzbh()">确定</span></p>
+				  </div>
+				  <div class="rounded-corners clearfix grpelem" id="u3433-4"><!-- content -->
+				   <p id="u3433-2"><span id="u3433" onclick="querybzbh()">返回</span></p>
+				  </div>
+				 </div>
+			 </div>
+			 <input type="text" name="cmd" value="addbzbh_web" style="display:none"/>
+        </form>
+        </div>
+        <div class="Container invi grpelem" id="u1158"><!-- simple frame -->
+        	<div id="jsgl">
+        		<div class="clearfix colelem" id="u3439-4"><!-- content -->
+				  <p id="u3439-2">教师管理</p>
+				 </div>
+				 <div class="clearfix colelem" id="pu3442-4"><!-- group -->
+				  <div class="clearfix grpelem" id="u3442-4"><!-- content -->
+				   <p>账号：</p>
+				  </div>
+				  <div><!-- content -->
+				   <input id="u3443-3" type="text"  class="clearfix grpelem">
+				  </div>
+				  <div class="clearfix grpelem" id="u3444-4"><!-- content -->
+				   <p>账号类型：</p>
+				  </div>
+				  <div><!-- content -->
+				   <select  class="clearfix grpelem" id="u3445-3">
+				   	  <option value="-1">全部</option>
+					  <option value="0">管理员</option>
+					  <option value="1">教务员</option>	
+					  <option value="2">教师</option>	  
+					</select>
+				  </div>
+                  <div class="clearfix grpelem" id="u3443-4"><!-- content -->
+				   <p>起始日期：</p>
+				  </div>
+				  <div><!-- content -->
+				   <input id="u3443-5" type="text"  class="clearfix grpelem Wdate">
+				  </div>
+				  <div class="clearfix grpelem" id="u3448-4"><!-- content -->
+				   <p>结束日期：</p>
+				  </div>
+                  <div><!-- content -->
+				   <input id="u3448-5" type="text"  class="clearfix grpelem Wdate">
+				  </div>
+				  <div class="clearfix grpelem" id="cxlx"><!-- content -->
+				   <p>查询类型：</p>
+				  </div>
+				  <div><!-- content -->
+				   <select  class="clearfix grpelem" id="cxlx_select">
+				   	  <option value="0">分类</option>
+					  <option value="1">汇总</option>
+					</select>
+				  </div>
+				 </div>
+				 <div class="clearfix colelem" id="pu3446-4"><!-- group -->
+				  <div class="rounded-corners clearfix grpelem" id="u3446-4"><!-- content -->
+				   <p id="u3446-2" onclick="queryjsgl()"><span id="u3446">查询</span></p>
+				  </div>
+				  <div class="rounded-corners clearfix grpelem" id="u3447-4"><!-- content -->
+				   <p id="u3447-2" onclick="newjsgl()"><span id="u3447">新增</span></p>
+				  </div>
+				 </div>
+				 <div class="colelem" id="u3441" style="display:none;" ><!-- simple frame -->
+				 	<table id="jsglmainTable"  border = "1">   
+					   <thead id="jsglth">
+						</thead>
+					   <tbody id = "jsglmain">
+					   </tbody>
+					   <tfoot></tfoot>
+					</table>   
+					<div id="jsglmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>
+				 </div>
+				</div>
+				<form id="jsglmx" style="margin-left:50px;display:none;"  action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+					<input id="admin_id" type="text" name="admin_id" class="clearfix grpelem" style="display:none;">
+			   		<div class="clearfix colelem" id="u3526-4"><!-- content -->
+					 <p id="u3526-2">添加用户</p>
+					</div>
+					<div class="clearfix colelem" id="pu3524-4"><!-- group -->
+					 <div class="clearfix grpelem" id="u3524-4"><!-- content -->
+					  <p>账号</p>
+					 </div>
+					 <div class="clearfix grpelem" id="u3527-4"><!-- content -->
+					  <p>密码</p>
+					 </div>
+					 <div class="clearfix grpelem" id="u3529-4"><!-- content -->
+					  <p>确认密码</p>
+					 </div>
+					</div>
+					<div class="clearfix colelem" id="pu3525-3"><!-- group -->
+					 <div><!-- content -->
+					  <input id="u3525-3" type="text" name="admin_username" class="clearfix grpelem">
+					 </div>
+					 <div><!-- content -->
+					  <input id="u3528-3" type="password" name="admin_password" class="clearfix grpelem">
+					 </div>
+					 <div><!-- content -->
+					  <input id="u3530-3" type="password" name="admin_passwordconfirm" class="clearfix grpelem">
+					 </div>
+					</div>
+					<div class="clearfix colelem" id="u3563-4"><!-- content -->
+					 <p>用户类型</p>
+					</div>
+					<div><!-- content -->
+						<select  class="clearfix grpelem" id="u3564-3" name="admin_type" style="margin-top:13px">
+	  
+						</select>
+					</div>
+					<div class="clearfix colelem" id="pu3559-4"><!-- group -->
+					 <div class="clearfix grpelem" id="u3559-4"><!-- content -->
+					  <p>姓名</p>
+					 </div>
+					 <div class="clearfix grpelem" id="u3531-4"><!-- content -->
+					  <p>性别</p>
+					 </div>
+					 <div class="clearfix grpelem" id="u3558-4"><!-- content -->
+					  <p>昵称</p>
+					 </div>
+					</div>
+					<div class="clearfix colelem" id="pu3560-3"><!-- group -->
+					 <div><!-- content -->
+					  <input id="u3560-3" type="text" name="admin_name" class="clearfix grpelem">
+					 </div>
+					 <div><!-- content -->
+						<select  class="clearfix grpelem" id="u3532-3" name="admin_sex">
+						  <option value="男">男</option>
+						  <option value="女">女</option>	
+						</select>
+					 </div>
+					 <div><!-- content -->
+					  <input id="u3557-3" type="text" name="admin_nickname" class="clearfix grpelem">
+					 </div>
+					</div>
+					<div class="clearfix colelem" id="pu3533-4"><!-- group -->
+					 <div class="clearfix grpelem" id="u3533-4"><!-- content -->
+					  <p>地址</p>
+					 </div>
+					 <div class="clearfix grpelem" id="u3545-4"><!-- content -->
+					  <p>个人介绍</p>
+					 </div>
+					</div>
+					<div class="clearfix colelem" id="ppu3534-3"><!-- group -->
+					 <div class="clearfix grpelem" id="pu3534-3"><!-- column -->
+					  <div><!-- content -->
+					   <input id="u3534-3" type="text" name="admin_address" class="clearfix grpelem">
+					  </div>
+					  <div class="clearfix colelem" id="u3535-4"><!-- content -->
+					   <p>出生日期</p>
+					  </div>
+					  <div><!-- content -->
+					   <input id="u3536-3" type="text" name="admin_birthday" class="clearfix grpelem Wdate">
+					  </div>
+					  <div class="clearfix colelem" id="u3539-4"><!-- content -->
+					   <p>手机</p>
+					  </div>
+					  <div><!-- content -->
+					   <input id="u3540-3" type="number" name="admin_phone" class="clearfix grpelem">
+					  </div>
+					  <div class="clearfix colelem" id="pu3541-4"><!-- group -->
+					   <div class="clearfix grpelem" id="u3541-4"><!-- content -->
+						<p>微博</p>
+					   </div>
+					   <div class="clearfix grpelem" id="u3543-4"><!-- content -->
+						<p>qq号码</p>
+					   </div>
+					  </div>
+					  <div class="clearfix colelem" id="pu3542-3"><!-- group -->
+					   <div><!-- content -->
+						<input id="u3542-3" type="text" name="admin_weibo" class="clearfix grpelem">
+					   </div>
+					   <div><!-- content -->
+						<input id="u3544-3" type="number" name="admin_qq" class="clearfix grpelem">
+					   </div>
+					  </div>
+					  <div class="clearfix colelem" id="u3561-4"><!-- content -->
+					   <p>常用邮箱</p>
+					  </div>
+					  <div><!-- content -->
+					   <input id="u3562-3" type="email" name="admin_email" class="clearfix grpelem">
+					  </div>
+					 </div>
+					 <div><!-- content -->
+					  <textarea id="u3546-3" type="text" name="admin_grjs" class="clearfix grpelem"></textarea>
+					 </div>
+					 <div class="clearfix colelem" id="admin_pic_group"><!-- simple frame -->
+						<a id="admin_pic_a"><image id="admin_pic" src="" style="width:90px;height:130px;border:1px"/></a></br>
+					 	<file><input type="file" id="admin_pic_url" name="admin_pic_url"  style="background-color:#FFFFFF;width:60px" onchange="admin_pic_show();"/></file>
+					</div>
+					</div>
+					<div class="clearfix colelem" id="pu3567-4"><!-- group -->
+					 <div class="rounded-corners clearfix grpelem" id="u3567-4"><!-- content -->
+					  <p id="u3567-2"><span id="u3567" onclick="addjsgl()">保存</span></p>
+					 </div>
+					 <div class="rounded-corners clearfix grpelem" id="u3568-4"><!-- content -->
+					  <p id="u3568-2"><span id="u3568" onclick="deljsgl()">删除</span></p>
+					 </div>
+					 <div class="rounded-corners clearfix grpelem" id="u3569-4"><!-- content -->
+					  <p id="u3569-2"><span id="u3569" onclick="goback('jsgl');queryjsgl()">返回</span></p>
+					 </div>
+					</div>
+					<input type="text" name="cmd" value="addjsgl" style="display:none"/>
+				</form>
+			   </div>
+			<div class="Container invi grpelem" id="u1160"><!-- simple frame -->
+				 <div class="clearfix colelem" id="pu3913-4"><!-- group -->
+				  <div class="clearfix grpelem" id="u3913-4"><!-- content -->
+				   <p>学号：</p>
+				  </div>
+				  <div><!-- content -->
+				    <input id="u3914-3" type="text" class="clearfix grpelem">
+				  </div>
+				  <div class="clearfix grpelem" id="u3916-4"><!-- content -->
+				   <p>日期：</p>
+				  </div>
+				  <div><!-- content -->
+				   <input id="u3917-3" type="text" class="clearfix grpelem Wdate">
+				  </div>
+				 </div>
+				 <div class="rounded-corners clearfix colelem" id="u3915-4"><!-- content -->
+				  <p id="u3915-2" onclick="queryyjfk()"><span id="u3915">查询</span></p>
+				 </div>
+				 <div class="colelem" id="u3922" style="display:none"><!-- simple frame -->
+				 	<table id="yjfkmainTable"  border = "1">   
+					   <thead id="yjfkth">
+					   		<tr><th>学号</th><th>内容</th><th>时间</th></tr>
+						</thead>
+					   <tbody id = "yjfkmain">
+					   </tbody>
+					   <tfoot></tfoot>
+					</table>   
+					<div id="yjfkmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>
+				 </div>
+			</div>
+			<div class="Container invi grpelem" id="u1162"><!-- simple frame --></div>
+			<div class="Container invi grpelem" id="u1164"><!-- simple frame --></div>
+			<div class="Container invi grpelem" id="u1166"><!-- simple frame --></div>
+			<div class="Container invi grpelem" id="u1168"><!-- simple frame --></div>
+           <div class="Container invi grpelem" id="u1172"><!-- simple frame -->
+           	<form id="tz"  action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+            		<div class="clearfix grpelem" id="tz_content"><!-- content -->
+                  	<p id="tz_title">通&nbsp;&nbsp;知</p>
+                  </div>
+                  <div class="clearfix colelem" id="tz_1"><!-- group -->
+                      <div class="clearfix grpelem" id="tz_bt_title"><!-- content -->
+                       <p>标题：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="tz_bt" name="tz_title" type="text"  class="clearfix grpelem">
+                      </div>
+                      <div><!-- content -->
+                       <textarea id="tz_nr" name="tz_content" type="text"  class="clearfix grpelem"></textarea>
+                      </div>
+                      <input type="text" name="cmd" value="addtz" style="display:none"/>
+                 </div>
+                 <div class="rounded-corners clearfix colelem" id="tz_bc_title"><!-- content -->
+                     <p id="tz_bc" onclick="addtz()"><span id="tz_bc_span">保存</span></p>
+                 </div>
+            	</form>
+           </div>
+           <div class="Container invi grpelem" id="u1174"><!-- simple frame -->
+           	<div id="wtdy">
+            		<div class="clearfix grpelem" id="wtdy_content"><!-- content -->
+                  	<p id="wtdy_title">问题答疑</p>
+                  </div>
+                  <div class="clearfix colelem" id="wtdy_1"><!-- group -->
+                      <div class="clearfix grpelem" id="wtdy_jsbh_title"><!-- content -->
+                       <p>教师编号：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="wtdy_jsbh" type="text"  class="clearfix grpelem">
+                      </div>
+                      <div class="clearfix grpelem" id="wtdy_xsxh_title"><!-- content -->
+                       <p>学生学号：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="wtdy_xsxh" type="text"  class="clearfix grpelem">
+                      </div>
+                 </div>
+                 <div class="clearfix colelem" id="wtdy_2"><!-- group -->
+                      <div class="clearfix grpelem" id="wtdy_qsrq_title"><!-- content -->
+                       <p>起始日期：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="wtdy_qsrq" type="text"  class="clearfix grpelem Wdate">
+                      </div>
+                      <div class="clearfix grpelem" id="wtdy_jsrq_title"><!-- content -->
+                       <p>结束日期：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="wtdy_jsrq" type="text"  class="clearfix grpelem Wdate">
+                      </div>
+                 </div>
+                 <div class="rounded-corners clearfix colelem" id="wtdy_cx_title"><!-- content -->
+                     <p id="wtdy_cx" onclick="querywtdy()"><span id="wtdy_cx_span">查询</span></p>
+                 </div>        
+                 <div class="colelem" id="wtdy_table" style="display:none"><!-- simple frame -->
+                        <table id="wtdymainTable"  border = "1">   
+                           <thead id="wtdyth">
+                                <tr><th>学号</th><th>姓名</th><th>生日</th><th>地址</th><th>问题</th><th>答复老师</th></tr>
+                            </thead>
+                           <tbody id = "wtdymain">
+                           </tbody>
+                           <tfoot></tfoot>
+                        </table>   
+						<div id="wtdymainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>
+				 	</div>
+            	</div>
+              <form id="wtdymx" style="display:none">
+              		<div class="clearfix grpelem" id="wtdymx_content"><!-- content -->
+                  	<p id="wtdymx_title">问题答疑</p>
+                  </div>
+                  <div class="clearfix colelem" id="wtdymx_1"><!-- group -->
+                      <div class="clearfix grpelem" id="wtdymx_xh_title"><!-- content -->
+                       <p>学号：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="wtdymx_xh" type="text"  class="clearfix grpelem">
+                      </div>
+                      <div class="clearfix grpelem" id="wtdymx_xm_title"><!-- content -->
+                       <p>姓名：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="wtdymx_xm" type="text"  class="clearfix grpelem">
+                      </div>
+                 </div>
+                 <div class="clearfix colelem" id="wtdymx_2"><!-- group -->
+                      <div class="clearfix grpelem" id="wtdymx_sr_title"><!-- content -->
+                       <p>生日：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="wtdymx_sr" type="text"  class="clearfix grpelem">
+                      </div>
+                      <div class="clearfix grpelem" id="wtdymx_dz_title"><!-- content -->
+                       <p>地址：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="wtdymx_dz" type="text"  class="clearfix grpelem">
+                      </div>
+                 </div>	
+                 <div class="clearfix colelem" id="wtdymx_3"><!-- group -->
+                      <div class="clearfix grpelem" id="wtdymx_js_title"><!-- content -->
+                       <p>回复教师：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="wtdymx_js" type="text"  class="clearfix grpelem">
+                      </div>
+                 </div>
+                 <div class="colelem" id="wtdymx_table"><!-- simple frame -->
+                        <table id="wtdymxmainTable"  border = "1">   
+                           <thead id="wtdymxth">
+                                <tr><th>问题</th><th>提问时间</th><th>回复</th><th>操作</th></tr>
+                            </thead>
+                           <tbody id = "wtdymxmain">
+                           </tbody>
+                           <tfoot></tfoot>
+                        </table>   
+						<div id="wtdymxmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>
+				 	</div>
+                  <div class="clearfix colelem" id="wtdymx_button_group"><!-- group -->
+                      <div class="rounded-corners clearfix grpelem" id="wtdymx_hf_title"><!-- content -->
+                       <p id="wtdymx_hf" onclick="adddy()"><span id="wtdymx_hf_span">回复</span></p>
+                      </div>
+                      <div class="rounded-corners clearfix grpelem" id="wtdymx_fh_title"><!-- content -->
+                       <p id="wtdymx_fh" onclick="goback('wtdy')"><span id="wtdymx_fh_span">返回</span></p>
+                      </div>
+                  </div> 	
+              </form>
+           </div>
+           <div class="Container invi grpelem" id="u1176"><!-- simple frame -->
+           	<div id="xhrz">
+            		<div class="clearfix grpelem" id="xhrz_content"><!-- content -->
+                  	<p id="xhrz_title">学画日志</p>
+                  </div>
+                  <div class="clearfix colelem" id="xhrz_1"><!-- group -->
+                      <div class="clearfix grpelem" id="xhrz_xh_title"><!-- content -->
+                       <p>学号：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="xhrz_xh" type="text"  class="clearfix grpelem">
+                      </div>
+                      <div class="clearfix grpelem" id="xhrz_dz_title"><!-- content -->
+                       <p>地址：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="xhrz_dz" type="text"  class="clearfix grpelem">
+                      </div>
+                 </div>
+                 <div class="clearfix colelem" id="xhrz_2"><!-- group -->
+                      <div class="clearfix grpelem" id="xhrz_qsrq_title"><!-- content -->
+                       <p>起始日期：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="xhrz_qsrq" type="text"  class="clearfix grpelem Wdate">
+                      </div>
+                      <div class="clearfix grpelem" id="xhrz_jsrq_title"><!-- content -->
+                       <p>结束日期：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="xhrz_jsrq" type="text"  class="clearfix grpelem Wdate">
+                      </div>
+                 </div>
+                 <div class="rounded-corners clearfix colelem" id="xhrz_cx_title"><!-- content -->
+                     <p id="xhrz_cx" onclick="queryxhrz()"><span id="xhrz_cx_span">查询</span></p>
+                 </div>        
+                 <div class="colelem" id="xhrz_table" style="display:none"><!-- simple frame -->
+                        <table id="xhrzmainTable"  border = "1">   
+                           <thead id="xhrzth">
+                                <tr><th>学号</th><th>姓名</th><th>生日</th><th>地址</th><th>标题</th><th>内容</th></tr>
+                            </thead>
+                           <tbody id = "xhrzmain">
+                           </tbody>
+                           <tfoot></tfoot>
+                        </table>   
+						<div id="xhrzmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>
+				 	</div>
+            	</div>
+               <form id="xhrzmx"  style="display:none">
+              		<div class="clearfix grpelem" id="xhrzmx_content"><!-- content -->
+                  	<p id="xhrzmx_title">学画日志</p>
+                  </div>
+                  <div class="clearfix colelem" id="xhrzmx_1"><!-- group -->
+                  	<input id="xhrzmx_id" type="text"  class="clearfix grpelem" style="display:none">
+                      <div class="clearfix grpelem" id="xhrzmx_xh_title"><!-- content -->
+                       <p>学号：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="xhrzmx_xh" type="text"  class="clearfix grpelem">
+                      </div>
+                      <div class="clearfix grpelem" id="xhrzmx_xm_title"><!-- content -->
+                       <p>姓名：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="xhrzmx_xm" type="text"  class="clearfix grpelem">
+                      </div>
+                 </div>
+                 <div class="clearfix colelem" id="xhrzmx_2"><!-- group -->
+                      <div class="clearfix grpelem" id="xhrzmx_sr_title"><!-- content -->
+                       <p>生日：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="xhrzmx_sr" type="text"  class="clearfix grpelem">
+                      </div>
+                      <div class="clearfix grpelem" id="xhrzmx_dz_title"><!-- content -->
+                       <p>地址：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="xhrzmx_dz" type="text"  class="clearfix grpelem">
+                      </div>
+                 </div>	
+                 <div class="clearfix colelem" id="xhrzmx_3"><!-- group -->
+                      <div class="clearfix grpelem" id="xhrzmx_sj_title"><!-- content -->
+                       <p>发布时间：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="xhrzmx_sj" type="text"  class="clearfix grpelem">
+                      </div>
+                 </div>
+                 <div class="clearfix colelem" id="xhrzmx_4"><!-- group -->
+                      <div class="clearfix grpelem" id="xhrzmx_bt_title"><!-- content -->
+                       <p>标题：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="xhrzmx_bt" type="text"  class="clearfix grpelem">
+                      </div>
+                      <div class="clearfix grpelem" id="xhrzmx_nr_title"><!-- content -->
+                       <p>内容：</p>
+                      </div>
+                      <div><!-- content -->
+                       <textarea id="xhrzmx_nr" type="text"  class="clearfix grpelem"></textarea>
+                      </div>
+                 </div>
+                 <div class="colelem" id="xhrzmx_table"><!-- simple frame -->
+                        <table id="xhrzmxmainTable"  border = "1">   
+                           <thead id="xhrzmxth">
+                            </thead>
+                           <tbody id = "xhrzmxmain">
+                           </tbody>
+                           <tfoot></tfoot>
+                        </table>   
+				 	</div>
+                  <div class="clearfix colelem" id="xhrzmx_button_group"><!-- group -->
+                      <div class="rounded-corners clearfix grpelem" id="xhrzmx_sc_title"><!-- content -->
+                       <p id="xhrzmx_sc" onclick="delxhrz('xhrz')"><span id="xhrzmx_sc_span">删除</span></p>
+                      </div>
+                      <div class="rounded-corners clearfix grpelem" id="xhrzmx_fh_title"><!-- content -->
+                       <p id="xhrzmx_fh" onclick="goback('xhrz')"><span id="xhrzmx_fh_span">返回</span></p>
+                      </div>
+                  </div> 	
+              </form>
+           </div>
+           <div class="Container invi grpelem" id="u1178"><!-- simple frame -->
+           	<div id="zcfw">
+                <div class="rounded-corners clearfix grpelem" id="newzcfw"><!-- content -->
+                   <p id="newzcfw_bt" onclick="newzcfw()"><span id="newzcfw_span">新增</span></p>
+                  </div>
+                <table id="zcfwmainTable"  border = "1">   
+                   <thead>
+                        <tr>
+                            <th >简介</th><th >支持服务内容</th>
+                        </tr>
+                    </thead>
+                   <tbody id = "zcfwmain">
+                   </tbody>
+                   <tfoot></tfoot>
+                </table>   
+                <div id="zcfwmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>
+            </div>
+            <form id="zcfwmx"  style="display:none"  action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+                 <div class="clearfix colelem" id="zcfwmx_1"><!-- group -->
+                  <div class="clearfix grpelem" id="zcfwmx_jj"><!-- group -->
+                   <div class="clearfix grpelem" id="zcfwmx_jj_content"><!-- content -->
+                    <p>简介：</p>
+                   </div>
+                  </div>
+                 	<div><!-- content -->
+                   <textarea id="zcfw_content" type="text" name="zcfw_content"  class="clearfix grpelem"></textarea>
+                  </div>
+                 </div>
+                 <div class="colelem" id="zcfwmx_file"><!-- simple frame -->
+                 	<file><input type="file" id="zcfw_file" name="files[]"  style="background-color:#FFFFFF"/></file>
+                 </div>
+                 <div class="clearfix colelem" id="zcfwmx_bt"><!-- group -->
+                  <div class="rounded-corners clearfix grpelem" id="zcfwmx_add"><!-- content -->
+                   <p id="zcfwmx_add_bt" onclick="addzcfw()"><span id="zcfwmx_add_span">保存</span></p>
+                  </div>
+                  <div class="rounded-corners clearfix grpelem" id="zcfwmx_fh"><!-- content -->
+                   <p id="zcfwmx_fh_bt" onclick="queryzcfw()"><span id="zcfwmx_fh_span">返回</span></p>
+                  </div>
+                 </div>
+                 <input type="text" name="cmd" value="addzcfw" style="display:none"/>
+             </form>
+           </div>
+           <div class="Container invi grpelem" id="u1180"><!-- simple frame -->
+           	<div id="gy">
+                <div class="rounded-corners clearfix grpelem" id="newgy"><!-- content -->
+                   <p id="newgy_bt" onclick="newgy()"><span id="newgy_span">新增</span></p>
+                  </div>
+                <table id="gymainTable"  border = "1">   
+                   <thead>
+                        <tr>
+                            <th >简介</th><th >关于内容</th>
+                        </tr>
+                    </thead>
+                   <tbody id = "gymain">
+                   </tbody>
+                   <tfoot></tfoot>
+                </table>   
+                <div id="gymainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>
+            </div>
+            <form id="gymx"  style="display:none"  action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+                 <div class="clearfix colelem" id="gymx_1"><!-- group -->
+                  <div class="clearfix grpelem" id="gymx_jj"><!-- group -->
+                   <div class="clearfix grpelem" id="gymx_jj_content"><!-- content -->
+                    <p>简介：</p>
+                   </div>
+                  </div>
+                 	<div><!-- content -->
+                   <textarea id="gy_content" type="text" name="gy_content"  class="clearfix grpelem"></textarea>
+                  </div>
+                 </div>
+                 <div class="colelem" id="gymx_file"><!-- simple frame -->
+                 	<file><input type="file" id="gy_file" name="files[]"  style="background-color:#FFFFFF"/></file>
+                 </div>
+                 <div class="clearfix colelem" id="gymx_bt"><!-- group -->
+                  <div class="rounded-corners clearfix grpelem" id="gymx_add"><!-- content -->
+                   <p id="gymx_add_bt" onclick="addgy()"><span id="gymx_add_span">保存</span></p>
+                  </div>
+                  <div class="rounded-corners clearfix grpelem" id="gymx_fh"><!-- content -->
+                   <p id="gymx_fh_bt" onclick="querygy()"><span id="gymx_fh_span">返回</span></p>
+                  </div>
+                 </div>
+                 <input type="text" name="cmd" value="addgy" style="display:none"/>
+             </form>	
+           </div>
+           <div class="Container invi grpelem" id="u1182"><!-- simple frame -->
+           	<div id="kktz">
+                <div class="rounded-corners clearfix grpelem" id="newkktz"><!-- content -->
+                   <p id="newkktz_bt" onclick="newkktz()"><span id="newkktz_span">新增</span></p>
+                  </div>
+                <table id="kktzmainTable"  border = "1">   
+                   <thead>
+                        <tr>
+                            <th >简介</th><th >关于内容</th>
+                        </tr>
+                    </thead>
+                   <tbody id = "kktzmain">
+                   </tbody>
+                   <tfoot></tfoot>
+                </table>   
+                <div id="kktzmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>
+            </div>
+            <form id="kktzmx"  style="display:none"  action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+                 <div class="clearfix colelem" id="kktzmx_1"><!-- group -->
+                  <div class="clearfix grpelem" id="kktzmx_jj"><!-- group -->
+                   <div class="clearfix grpelem" id="kktzmx_jj_content"><!-- content -->
+                    <p>简介：</p>
+                   </div>
+                  </div>
+                 	<div><!-- content -->
+                   <textarea id="kktz_content" type="text" name="kktz_content"  class="clearfix grpelem"></textarea>
+                  </div>
+                 </div>
+                 <div class="colelem" id="kktzmx_file"><!-- simple frame -->
+                 	<file><input type="file" id="kktz_file" name="files[]"  style="background-color:#FFFFFF"/></file>
+                 </div>
+                 <div class="clearfix colelem" id="kktzmx_bt"><!-- group -->
+                  <div class="rounded-corners clearfix grpelem" id="kktzmx_add"><!-- content -->
+                   <p id="kktzmx_add_bt" onclick="addkktz()"><span id="kktzmx_add_span">保存</span></p>
+                  </div>
+                  <div class="rounded-corners clearfix grpelem" id="kktzmx_fh"><!-- content -->
+                   <p id="kktzmx_fh_bt" onclick="querykktz()"><span id="kktzmx_fh_span">返回</span></p>
+                  </div>
+                 </div>
+                 <input type="text" name="cmd" value="addkktz" style="display:none"/>
+             </form>
+           </div>
+           <div class="Container invi grpelem" id="u1183-1"><!-- simple frame -->
+				 <div class="clearfix colelem" id="pu3914-4"><!-- group -->
+                      <div class="clearfix grpelem" id="u3914-4"><!-- content -->
+                       <p>学号：</p>
+                      </div>
+                      <div><!-- content -->
+                        <input id="u3915-3" type="text" class="clearfix grpelem">
+                      </div>
+                      <div class="clearfix grpelem" id="u3917-4"><!-- content -->
+                       <p>间隔天数：</p>
+                      </div>
+                      <div><!-- content -->
+                       <input id="u3918-3" type="text" class="clearfix grpelem">
+                      </div>
+                     </div>
+                     <div class="clearfix colelem" id="pu3914-6"><!-- group -->
+                     <div class="clearfix grpelem" id="u3914-6"><!-- content -->
+                       <p>班级：</p>
+                      </div>
+                      <div><!-- content -->
+                        <select id="u3915-6" name="xysk_bj_id" type="text" class="clearfix grpelem"></select>
+                      </div>
+                     </div>
+                     <div class="rounded-corners clearfix colelem" id="u3915-5"><!-- content -->
+                      <p id="u3916-2" onclick="queryxysk()"><span id="u3916">查询</span></p>
+                     </div>
+                     <div class="colelem" id="u3923" style="display:none"><!-- simple frame -->
+                        <table id="xyskmainTable"  border = "1">   
+                           <thead id="xyskth">
+                                <tr><th>学号</th><th>姓名</th><th>生日</th><th width="130px">上课时间</th><th>课程</th><th>作品数</th><th>已学课程</th><th>剩余课程</th><th>当前课程</th></tr>
+                            </thead>
+                           <tbody id = "xyskmain">
+                           </tbody>
+                           <tfoot></tfoot>
+                        </table>   
+                        <div id="xyskmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>
+                     </div>
+                </div>
+         <div class="Container invi grpelem" id="u1170"><!-- simple frame -->
+           <div id="bjdp">
+                <div class="clearfix colelem" id="pu3008-6"><!-- group -->
+              <div class="clearfix grpelem" id="u3008-6"><!-- content -->
+               <p id="u3008-7">班级点评</p>
+              </div>
+              <div class="museBGSize clearfix grpelem" id="u3009-6" onclick="newbjdp()"><!-- content -->
+               <p id="u3009-7">上传点评</p>
+              </div>
+             </div>
+              <div class="clearfix colelem" id="pu3914-7"><!-- group -->
+             <div class="clearfix grpelem" id="u3914-7"><!-- content -->
+               <p>班级：</p>
+              </div>
+              <div><!-- content -->
+                <select id="u3915-7" name="select_bjdp_bj_id" type="text" class="clearfix grpelem"></select>
+              </div>
+             </div>
+             <div class="rounded-corners clearfix colelem" id="u3915-8"><!-- content -->
+              <p id="u3916-6" onclick="querybjdp()"><span id="u3916-8">查询</span></p>
+             </div>
+             <div class="colelem" id="u3010-6"><!-- simple frame -->
+                <table id="bjdpmainTable"  border = "1">   
+                   <thead>
+                        <tr><th>班级</th><th>课件</th><th>点评老师</th><th>点评地址</th><th>时间</th></tr>
+                    </thead>
+                   <tbody id = "bjdpmain">
+                   </tbody>
+                   <tfoot></tfoot>
+                </table>   
+                <div id="bjdpmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>    
+             </div>
+            </div>
+            <form id="bjdpmx" style="margin-top:50px"  style="display:none"  action="index.php"  encType="multipart/form-data" method="post" target="_blank">
+          <div class="clearfix colelem" id="pu1690-6"><!-- group -->
+          <div class="clearfix grpelem" id="u1690-6"><!-- group -->
+           <div class="clearfix grpelem" id="u1691-6"><!-- content -->
+            <p>编号：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+            <input id="u1692-6" type="text" name="bjdp_id" class="clearfix grpelem">
+          </div>
+          <div class="clearfix grpelem" id="u1693-6"><!-- group -->
+           <div class="clearfix grpelem" id="u1694-6"><!-- content -->
+            <p>班级：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+            <select id="u1695-6" type="text" name="bjdp_bj_id" class="clearfix grpelem"></select>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu1690-7"><!-- group -->
+          <div class="clearfix grpelem" id="u1690-7"><!-- group -->
+           <div class="clearfix grpelem" id="u1691-7"><!-- content -->
+            <p>课程：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+            <select id="u1692-7" type="text" name="bjdp_kc_id" class="clearfix grpelem" onChange="change('kc_id')"></select>
+          </div>
+          <div class="clearfix grpelem" id="u1693-7"><!-- group -->
+           <div class="clearfix grpelem" id="u1694-7"><!-- content -->
+            <p>课件：</p>
+           </div>
+          </div>
+          <div><!-- content -->
+            <select id="u1695-7" type="text" name="bjdp_kj_id" class="clearfix grpelem"></select>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu1697-6"><!-- group -->
+          <div class="clearfix grpelem" id="u1697-6"><!-- group -->
+           <div class="clearfix grpelem" id="u1698-6"><!-- content -->
+            <p>选择点评：</p>
+           </div>
+          </div>
+          <div class="grpelem" id="u1696-6" style="margin-top:15px"><!-- simple frame -->
+          <file><input type="file" id="bjdp" name="bjdp"  style="background-color:#FFFFFF"/></file>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu1701-6"><!-- group -->
+          <div class="rounded-corners clearfix grpelem" id="u1701-6"><!-- content -->
+           <p id="u1701-7" onclick="addbjdp()"><span id="u1701-8">保存</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="u1702-6"><!-- content -->
+           <p id="u1702-7" onclick="delbjdp()"><span id="u1702-8">删除</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="bjdp_cancel"><!-- content -->
+           <p id="u1702-9" onclick="querybjdp()"><span id="u1702-10">返回</span></p>
+          </div>
+         </div>
+         	<input type="text" name="cmd" value="addbjdp" style="display:none"/>
+            </form>
+           </div>
+		</div>	
+      </div>
+      <div class="ThumbGroup clearfix grpelem" id="u1055"><!-- none box -->
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1058" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1110-4" onclick="queryzsjj()"><!-- content -->
+          <p id="u1110-2">西夜简介</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1115" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1118-4" onclick="queryzsxw()"><!-- content -->
+          <p id="u1118-2">西夜新闻</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1134" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1136-4" onclick="queryzxgg()"><!-- content -->
+          <p id="u1136-2">西夜资讯</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1138" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1140-4" onclick="querysybzbh()"><!-- content -->
+          <p id="u1140-2">边走边画</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1142" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1168-4" onclick="querysyzsxb()"><!-- content -->
+          <p id="u1168-2">西夜小报</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1145" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1169-4" onclick="queryyxzp()"><!-- content -->
+          <p id="u1169-2">优秀作品</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1147" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1170-4"  onclick="querybmlc()"><!-- content -->
+          <p id="u1170-2">课程详细</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1149" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1171-4" onclick="querykc()"><!-- content -->
+          <p id="u1171-2">课件管理</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1151" style="display:none;"><!-- group -->
+                  <div class="clearfix grpelem" id="u1172-4" onclick="queryzpdp_init()"><!-- content -->
+          <p id="u1172-2">作业点评</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor" >
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1153" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1173-4" onclick="queryzsxb()"><!-- content -->
+          <p id="u1173-2">西夜小报</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1155" style="display:none;"><!-- group -->
+                  <div class="clearfix grpelem" id="u1174-4" onclick="queryxygl_init()"><!-- content -->
+          <p id="u1174-2">学员管理</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1157" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1175-4" onclick="goback('bzbh')"><!-- content -->
+          <p id="u1175-2">边走边画</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1159" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1176-4" onclick="goback('jsgl')"><!-- content -->
+          <p id="u1176-2">老师管理</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1161" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1177-4"><!-- content -->
+          <p id="u1177-2">意见反馈</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1163" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1178-4"><!-- content -->
+          <p id="u1178-2">员工手册</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1165" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1179-4"><!-- content -->
+          <p id="u1179-2">公司通知</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1167" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1180-4"><!-- content -->
+          <p id="u1180-2">请假</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1169" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1181-4"><!-- content -->
+          <p id="u1181-2">帮助</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1173" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1183-4"><!-- content -->
+          <p id="u1183-2">通知</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1175" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1184-4"  onclick="goback('wtdy')"><!-- content -->
+          <p id="u1184-2">问题答疑</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1177" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1185-4"  onclick="goback('xhrz')"><!-- content -->
+          <p id="u1185-2">学画日志</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1179" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1186-5"  onclick="queryzcfw()"><!-- content -->
+          <p id="u1186-3">支持服务</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1181" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1187-4" onclick="querygy()"><!-- content -->
+          <p id="u1187-2">关于</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="kktz_bt" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1188-4" onclick="querykktz()"><!-- content -->
+          <p id="u1188-2">开课通知</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="xysk_bt" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1189-4" onclick="query_init('xysk')"><!-- content -->
+          <p id="u1189-2">学员上课</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1171" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1182-4" onclick="query_init('bjdp')"><!-- content -->
+          <p id="u1182-2">班级点评</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1171-7" style="display:none;"><!-- group -->
+         <div class="clearfix grpelem" id="u1171-8" onclick="adminloginout()"><!-- content -->
+          <p id="u1171-9">退出</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="verticalspacer"></div>
+   </div>
+  </div>
+  <!-- JS includes -->
+  <script type="text/javascript">
+   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+</script>
+  <script type="text/javascript">
+   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+</script>
+<script type="text/javascript">
+$(function(){
+	$(".Wdate").click(function(){
+		WdatePicker();
+	});
+	$(".Wdate").attr("readonly","readonly");
+});
+</script>
+  <script src="scripts/museutils.js?4210811981" type="text/javascript"></script>
+  <script src="scripts/jquery.tobrowserwidth.js?4262060562" type="text/javascript"></script>
+  <script src="scripts/jquery.musepolyfill.bgsize.js?3812640551" type="text/javascript"></script>
+  <script src="scripts/webpro.js?4369767" type="text/javascript"></script>
+  <script src="scripts/musewpslideshow.js?83045620" type="text/javascript"></script>
+  <script src="scripts/jquery.museoverlay.js?3925244142" type="text/javascript"></script>
+  <script src="scripts/touchswipe.js?261777990" type="text/javascript"></script>
+  <script src="scripts/jquery.watch.js?4199601726" type="text/javascript"></script>
+  <!-- Other scripts -->
+  <script type="text/javascript">
+   $(document).ready(function() { try {
+Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
+$('.browser_width').toBrowserWidth();/* browser width elements */
+Muse.Utils.prepHyperlinks();/* body */
+Muse.Utils.initWidget('#pamphletu1047', function(elem) { new WebPro.Widget.ContentSlideShow(elem, {contentLayout_runtime:'stack',event:'click',deactivationEvent:'',autoPlay:false,displayInterval:3000,transitionStyle:'fading',transitionDuration:500,hideAllContentsFirst:false,shuffle:false}); });/* #pamphletu1047 */
+Muse.Utils.fullPage('#page');/* 100% height page */
+Muse.Utils.showWidgetsWhenReady();/* body */
+Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
+} catch(e) { Muse.Assert.fail('Error calling selector function:' + e); }
+}); 
+</script>
+   </body>
+</html>
