@@ -95,7 +95,7 @@ else
 	//$reply["errmsg"]="功能号为空";
 }
 
-$base= json_encode($reply);
+$base= json_encode($reply, JSON_UNESCAPED_UNICODE);
 //$base= urldecode($base);
 
 echo $base;
