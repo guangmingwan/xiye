@@ -2219,7 +2219,9 @@ function addxygl(){
 	$("#xyglmx").submit();	
 }
 
-
+function exportxy() {
+	window.open("index.php?cmd=exportxy");
+}
 function newxygl(){
 	$("#xygl").hide();$("#xyglmx").show();document.getElementById("xyglmx").reset();
 	$("#u3327-3").empty();
