@@ -2758,6 +2758,23 @@ td iframe{
 	margin-top: 7px;
 	left: 90px;
 }
+#u3179-44 {
+    background: #f0f5f5 none repeat scroll 0 0;
+    border-radius: 10px;
+    color: #000000;
+    font-size: 18px;
+    left: 292px;
+    line-height: 2.5;
+    margin-right: -10000px;
+    min-height: 37px;
+    position: relative;
+    text-align: center;
+    width: 90px;
+    z-index: 30;
+}
+div#u3179-44.clearfix.grpelem a {
+	text-decoration: none;
+}
 
 #u3179-4
 {
@@ -2812,6 +2829,18 @@ td iframe{
 	font-size: 18px;
 	position: relative;
 	margin-right: -10000px;
+}
+#u3182-44 {
+    background-color: #f0f5f5;
+    border-radius: 10px;
+    font-size: 18px;
+    left: 313px;
+    margin-right: -10000px;
+    min-height: 36px;
+    position: relative;
+    text-align: center;
+    width: 152px;
+    z-index: 41;
 }
 
 #u3182-4
