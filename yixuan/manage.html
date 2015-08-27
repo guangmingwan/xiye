@@ -807,6 +807,35 @@
         </form>
         </div>
         <div class="Container invi grpelem" id="u1154"><!-- simple frame -->
+        <div id="bjgl" style="margin-top:20px;">
+         
+         <div class="clearfix colelem" id="pu3181-4"><!-- group -->
+          <div class="rounded-corners clearfix grpelem" id="u3181-4"><!-- content -->
+           <p id="u3181-2" onclick="queryxygl()"><span id="u3181">查询</span></p>
+          </div>
+          <div class="rounded-corners clearfix grpelem" id="u3182-4"><!-- content -->
+           <p id="u3182-2" onclick="newxygl()"><span id="u3182">新增</span></p>
+          </div>
+         
+         <div class="colelem" id="u3183" style="display:none"><!-- simple frame -->
+         	<table id="xyglmainTable"  border = "1">   
+			   <thead>
+			   		<tr><th>班级序号</th><th>班级名称</th><th>操作</th></tr>
+				</thead>
+			   <tbody id = "bjglmain">
+			   </tbody>
+			   <tfoot></tfoot>
+			</table>   
+			<div id="bjglmainTablePaging" class="search-for"><p class="paging"><a id="prePage" >上一页</a> | 0/0 | <a id="nextPage" >下一页</a></p></div>
+			 
+              
+         </div>
+         
+        </div>
+        
+        </div>
+        
+        <div class="Container invi grpelem" id="u1154"><!-- simple frame -->
         <div id="xygl" style="margin-top:20px;">
         	<div class="clearfix colelem" id="pu3177-4"><!-- group -->
           <div class="clearfix grpelem" id="u3177-4"><!-- content -->
@@ -858,6 +887,7 @@
           </div>
               
          </div>
+        </div>
         </div>
         
         <form id="xyglmx" style="display:none;" action="index.php"  encType="multipart/form-data" method="post" target="_blank">
@@ -1995,6 +2025,13 @@
         <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1153" style="display:none;"><!-- group -->
          <div class="clearfix grpelem" id="u1173-4" onclick="queryzsxb()"><!-- content -->
           <p id="u1173-2">西夜小报</p>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor">
+        <div class="Thumb popup_element rounded-corners gs--2 clearfix" id="u1154" style="display:none;"><!-- group -->
+                  <div class="clearfix grpelem" id="u1174-4" onclick="querybjgl_init()"><!-- content -->
+          <p id="u1174-2">班级管理</p>
          </div>
         </div>
        </div>

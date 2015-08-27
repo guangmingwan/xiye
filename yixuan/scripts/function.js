@@ -933,7 +933,11 @@ function addbmlc(){
 function newbmlc(){
 	$("#bmlc").hide();$("#bmlcmx").show();document.getElementById("bmlcmx").reset();	
 }
-
+function querybjgl_init() {
+	$("#bjgl").show();
+	$("#bjglmx").hide();
+	//querybj();
+}
 function queryxygl_init(){
 	$("#xygl").show();
 	$("#xyglmx").hide();
